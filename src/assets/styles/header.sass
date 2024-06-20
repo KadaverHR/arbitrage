@@ -11,6 +11,11 @@
 		gap: 50px
 		@media all and ($l)
 			gap: 40px
+	&__bottom
+		box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+		width: 100%
+		padding: 22px 0
+		background: $white
 .header-top
 	&__col
 		display: grid
@@ -27,11 +32,11 @@
 		align-items: center
 		justify-content: center
 	&__serch-text
-		font-family: $--font-family
+		font-family: $font-family
 		font-weight: 400
 		font-size: 15px
 		line-height: 120%
-		color: $--white
+		color: $white
 
 	&__col-box
 		display: grid
@@ -46,10 +51,10 @@
 		justify-items: start
 		justify-content: start
 	&__contact-text
-		font-family: $--second-family
+		font-family: $second-family
 		font-weight: 400
 		font-size: 15px
-		color: $--white
+		color: $white
 		white-space: nowrap
 		span
 			font-weight: 700
@@ -71,11 +76,43 @@
 		align-items: center
 		text-decoration: none
 	&__btn
-		border: 1px solid $--btn-active
+		border: 1px solid $btn-active
 		border-radius: 50px
 		padding: 7px 20px
-		font-family: $--font-family
+		font-family: $font-family
 		font-weight: 400
 		font-size: 13px
 		text-align: center
-		color: $--white
+		color: $white
+
+.header-bottom
+	display: grid
+	grid-auto-flow: column
+	justify-content: space-between
+	gap: 10px
+	&__item
+		display: grid
+		grid-auto-flow: column
+		position: relative
+		&::after
+			right: -15px
+			display: grid
+			width: 3px
+			top: 50%
+			transform: translateY(-50%)
+			height: 12px
+			position: absolute
+			content: ""
+			background: #727584
+		&:last-child::after
+			display: none
+
+	&__link
+		font-family: $second-family
+		font-weight: 700
+		font-size: 15px
+		line-height: 120%
+		text-align: center
+		color: $h1-6
+		text-decoration: none
+		white-space: nowrap

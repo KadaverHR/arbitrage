@@ -19,11 +19,17 @@
     padding-left: 16px
     padding-right: 16px
 
+  &--swiper
+    max-width: 1520px
+    padding-left: 125px
+    padding-right: 125px
+
+
 body
   line-height: 1.2
   margin: 0
   position: relative
-  font-family: $--font-family
+  font-family: $font-family
 
 ul
   list-style-type: none
@@ -53,11 +59,24 @@ img
   max-width: 100%
 
 main
-  padding-top: 120px
-  padding-bottom: 130px
-  @media all and ($xs)
-    padding-top: 65px
-    padding-bottom: 100px
+  // padding-top: 120px
+  // padding-bottom: 130px
+  // @media all and ($xs)
+  //   padding-top: 65px
+  //   padding-bottom: 100px
+
+.title-bg
+  position: relative
+  &::after
+    position: absolute
+    height: 60%
+    width: 65%
+    content: ""
+    background: $underline
+    z-index: -1
+    left: 3px
+    top: 50%
+    transform: translateY(calc(-50% - 5px))
 
 .d-n
   display: none !important
@@ -76,13 +95,13 @@ input
 
     background: #82807e
     width: calc(100% - 30px)
-    color: $--white
-    font-family: $--second-family
+    color: $white
+    font-family: $second-family
     font-weight: 400
     font-size: 15px
     &::placeholder
-      color: $--white
-      font-family: $--second-family
+      color: $white
+      font-family: $second-family
       font-weight: 400
       font-size: 15px
       @media all and ($l)
@@ -100,3 +119,49 @@ input
     top: 50%
     right: 10px
     transform: translateY(-50%)
+
+.gray
+  background: $body1
+
+.section
+  padding-top: 50px
+  padding-bottom: 50px
+
+.title
+  font-family: $second-family
+  font-weight: 700
+  font-size: 40px
+  line-height: 130%
+  color: $h1-6
+  position: relative
+  z-index: 1
+  &.marker
+    margin-top: 25px
+    &::before
+      content: ""
+      position: absolute
+      width: 46px
+      height: 6px
+      border-radius: 3px
+      background: $button
+      top: -7px
+      left: 0
+
+.title-wrapper
+  display: grid
+  gap: 10px
+  grid-auto-flow: column
+  align-items: center
+  justify-content: space-between
+  &__link
+    border: 1px solid $button
+    border-radius: 50px
+    padding: 5px 20px
+    font-family: $font-family
+    font-weight: 700
+    font-size: 14px
+    text-align: center
+    color: $h1-6
+    text-decoration: none
+
+

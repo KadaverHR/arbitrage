@@ -1,0 +1,53 @@
+.banner
+  width: 100%
+  height: 661px
+  background: url(/assets/img/banner.jpg)
+  background-position: center center
+  background-size: cover
+  padding-top: 100px
+  padding-bottom: 100px
+  position: relative
+  &__content
+    max-width: 509px
+    display: grid
+    gap: 40px
+    justify-items: start
+    justify-content: start
+  &__title
+    font-family: $second-family
+    font-weight: 700
+    font-size: 52px
+    line-height: 112%
+    color: $h1-6
+    z-index: 1
+  &__list
+    display: grid
+    gap: 20px
+  &__item-text
+    font-family: $font-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 133%
+    color: $text2
+  &__item
+    display: grid
+    position: relative
+    grid-auto-flow: column
+    justify-items: start
+    justify-content: start
+    align-items: center
+    gap: 10px
+    &::before
+      content: ""
+      background: url(/assets/img/bannet-marker.svg)
+      width: 20px
+      height: 20px
+  &__btn
+    border-radius: 50px
+    padding: 10px 30px
+    background: $button
+    font-family: $font-family
+    font-weight: 700
+    font-size: 16px
+    text-align: center
+    color: $h1-6

@@ -26,36 +26,32 @@ $(document).ready(function () {
   };
   replaceSvg();
 
-  // Слайдер баннер
-  new Swiper(".swiper-main-big", {
-    navigation: {
-      nextEl: ".swiper-main-big__swiper-button-next",
-      prevEl: ".swiper-main-big__swiper-button-prev",
-    },
-    spaceBetween: 8,
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        grid: {
-          rows: 2,
-        },
-      },
-      576: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      891: {
-        slidesPerView: 2,
-      },
-      1920: {
-        slidesPerView: 2,
-      },
-    },
+  ///accordion
+
+  jQuery(document).ready(function ($) {
+    $("#accordion").accordionjs({
+      // Allow self close.(data-close-able)
+      closeAble: true,
+
+      // Close other sections.(data-close-other)
+      closeOther: true,
+
+      // Animation Speed.(data-slide-speed)
+      slideSpeed: 150,
+
+      // The section open on first init. A number from 1 to X or false.(data-active-index)
+      activeIndex: false,
+
+ 
+    });
   });
 
-  new Swiper(".swiper-main-saintly", {
+
+
+
+  // Слайдер баннер
+
+  new Swiper(".swiper-staff", {
     navigation: {
       nextEl: ".swiper-main-saintly__swiper-button-next",
       prevEl: ".swiper-main-saintly__swiper-button-prev",
@@ -75,7 +71,7 @@ $(document).ready(function () {
         slidesPerView: 4,
       },
       1920: {
-        slidesPerView: 4,
+        slidesPerView: 3,
       },
     },
   });
