@@ -185,7 +185,7 @@
   .acc_section.acc_active > .acc_head
     background: #fff
   &__open
-    display: grid 
+    display: grid
     grid-template-columns: 1fr auto
     gap: 40px
     align-items: center
@@ -221,3 +221,44 @@
     text-align: center
     color: $h1-6
     text-decoration: none
+
+.staff
+  display: flex
+  &__card
+    display: grid
+    gap: 30px
+  &__card-content
+    display: grid
+    gap: 10px
+  &__card-title
+    font-family: $second-family
+    font-weight: 600
+    font-size: 21px
+    line-height: 152%
+    color: #1a1a1e
+  &__card-desc
+    font-family: $second-family
+    font-weight: 500
+    font-size: 14px
+    line-height: 171%
+    color: $text
+  &__card-en
+    font-family: $font-family
+    font-weight: 400
+    font-size: 15px
+    color: $body-text
+  &__card-img
+    display: grid
+    border-radius: 5px
+    max-width: 350px
+    object-fit: cover
+    height: 237px
+  .swiper-staff
+    padding-top: 40px
+    padding-bottom: 40px
+
+  .swiper-pagination-bullet
+    width: 30px
+    height: 3px
+    border-radius: 0
+    background: #6d6f7c
