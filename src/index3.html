@@ -1,0 +1,107 @@
+{% set title = "Контакты" %}
+{% set bodyClass = "is-contact-page" %}
+
+{% extends "html/layouts/default.html" %}
+
+{% block content %}
+
+
+<section class="contact-page">
+	<div class="container">
+		{% include "html/includes/breadcrumbs.html" %}
+		<div class="contact-page__title-bg">
+			<h1 class="title">
+				Контакты
+			</h1>
+		</div>
+
+		<div class="contact-page__box">
+			<div class="contact-page__col">
+				<p class="contact-page__col-title">
+					Реквизиты
+				</p>
+
+				<ul class="contact-page__list">
+					<li class="contact-page__item">
+						<p class="contact-page__item-text">
+							ИНН: <span> 7704250024</span>
+						</p>
+					</li>
+					<li class="contact-page__item">
+						<p class="contact-page__item-text">
+							ОГРН: <span> 1027704015448</span>
+						</p>
+					</li>
+					<li class="contact-page__item">
+						<p class="contact-page__item-text">
+							Р/C: <span> 1027704015448</span>
+						</p>
+					</li>
+					<li class="contact-page__item">
+						<p class="contact-page__item-text">
+							БИК: <span> 1027704015448</span>
+						</p>
+					</li>
+				</ul>
+
+			</div>
+			<div class="contact-page__col">
+				<p class="contact-page__col-title">
+					Телефоны, почта
+				</p>
+
+				<ul class="contact-page__list">
+					<li class="contact-page__item">
+						<a href="" class="contact-page__item-text link tel">
+							8 (925) <span> 031-13-37</span>
+
+						</a>
+					</li>
+					<li class="contact-page__item">
+						<a href="" class="contact-page__item-text link tel">
+							8 (800)<span> 800-80-80</span>
+
+						</a>
+					</li>
+					<li class="contact-page__item">
+						<a href="" class="contact-page__item-text link mail">
+							support<span>@tech-b.ru</span>
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+			<div class="contact-page__col">
+				<p class="contact-page__col-title">
+					Соцсети
+				</p>
+
+				<ul class="contact-page__list">
+					<li class="contact-page__item">
+						<a href="" class="contact-page__item-text link tg">
+							8 (925) <span> 031-13-37</span>
+
+						</a>
+					</li>
+					<li class="contact-page__item">
+						<a href="" class="contact-page__item-text link vk">
+							8 (800)<span> 800-80-80</span>
+
+						</a>
+					</li>
+					<li class="contact-page__item">
+						<a href="" class="contact-page__item-text link wa">
+							support<span>@tech-b.ru</span>
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+{% endblock %}

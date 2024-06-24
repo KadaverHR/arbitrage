@@ -1,0 +1,32 @@
+.breadcrumbs
+	padding-bottom: 30px
+	display: grid
+	gap: 15px
+	grid-auto-flow: column
+	justify-content: start
+	justify-items: start
+	&__link
+		font-family: $font-family
+		font-weight: 400
+		font-size: 14px
+		line-height: 114%
+		color: $body-text
+		text-decoration: none
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			background-image: url(/assets/img/breadcrumbs.svg)
+			background-repeat: no-repeat
+			width: 5px
+			height: 6px
+			right: -10px
+			top: 50%
+			transform: translateY(-50%)
+
+	&__title
+		font-family: $font-family
+		font-weight: 400
+		font-size: 14px
+		line-height: 114%
+		color: $text2

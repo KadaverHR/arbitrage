@@ -1,0 +1,79 @@
+.contact-page
+	padding-top: 40px
+	padding-bottom: 60px
+	&__title-bg
+		background-image: url(/assets/img/contacts.jpg)
+		min-height: 201px
+		width: 100%
+		border-radius: 5px
+		background-position: center center
+		background-repeat: no-repeat
+		display: grid
+		justify-content: center
+		align-items: center
+		.title
+			font-family: $second-family
+			font-weight: 700
+			font-size: 40px
+			line-height: 130%
+			color: $white
+	&__box
+		display: grid
+		grid-template-columns: repeat(3, auto)
+		gap: 10px
+		justify-content: space-between
+		padding-top: 50px
+	&__col
+		display: grid
+		gap: 15px
+	&__col-title
+		font-family: $second-family
+		font-weight: 500
+		font-size: 24px
+		line-height: 158%
+		color: $h1-6
+	&__list
+		display: grid
+		gap: 15px
+	&__item
+		display: grid
+	&__item-text
+		font-family: $second-family
+		font-weight: 400
+		font-size: 15px
+		line-height: 120%
+		color: $body-text
+		span
+			font-weight: 700
+		&.link
+			text-decoration: none
+			display: grid
+			grid-auto-flow: column
+			gap: 10px
+			align-items: center
+			justify-content: start
+			justify-items: start
+			&::before
+				content: ""
+				background-repeat: no-repeat
+				background-position: center center
+			&.tel::before
+				background-image: url(/assets/img/hed-tel.svg)
+				width: 16px
+				height: 16px
+			&.mail::before
+				background-image: url(/assets/img/hed-mail.svg)
+				width: 21px
+				height: 16px
+			&.tg::before
+				background-image: url(/assets/img/tg-or.svg)
+				width: 20px
+				height: 17px
+			&.vk::before
+				background-image: url(/assets/img/vk-or.svg)
+				width: 24px
+				height: 14px
+			&.wa::before
+				background-image: url(/assets/img/wa-or.svg)
+				width: 19px
+				height: 19px

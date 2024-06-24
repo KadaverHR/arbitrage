@@ -256,9 +256,465 @@
   .swiper-staff
     padding-top: 40px
     padding-bottom: 40px
-
   .swiper-pagination-bullet
     width: 30px
     height: 3px
     border-radius: 0
     background: #6d6f7c
+
+.case
+  display: flex
+  .swiper-case
+    padding-top: 40px
+    padding-bottom: 40px
+  .swiper-pagination-bullet
+    width: 30px
+    height: 3px
+    border-radius: 0
+    background: #6d6f7c
+  &__card
+    display: grid
+    grid-template-columns: 1fr
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.15)
+    border-radius: 5px
+  &__card-img
+    grid-row: 1/3
+    grid-column: 1 / 2
+  &__card-content
+    border-radius: 0 0 5px 5px
+    background: rgba(41, 45, 56, 0.8)
+    display: grid
+    gap: 10px
+    grid-row: 2/3
+    grid-column: 1 / 2
+    padding: 15px 20px
+
+  &__card-name
+    font-family: $second-family
+    font-weight: 600
+    font-size: 21px
+    line-height: 152%
+    color: $white
+  &__card-price-box
+    display: grid
+    gap: 10px
+    grid-auto-flow: column
+    justify-content: start
+    align-items: center
+    justify-items: start
+  &__card-price-title
+    font-family: $second-family
+    font-weight: 700
+    font-size: 14px
+    line-height: 171%
+    color: #d7d7d7
+  &__card-price
+    font-family: $second-family
+    font-weight: 500
+    font-size: 14px
+    line-height: 171%
+    color: $button
+  &__card-decs
+    font-family: $font-family
+    font-weight: 400
+    font-size: 15px
+    color: $white
+  &__card-btn
+    border-radius: 50px
+    padding: 10px 30px
+    background: $button
+    font-family: $font-family
+    font-weight: 700
+    font-size: 14px
+    line-height: 114%
+    text-align: center
+    color: $h1-6
+    text-decoration: none
+    margin-top: 5px
+
+.consultation
+  background: url(/assets/img/consbg.jpg)
+  width: 100%
+  min-height: 335px
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  padding-top: 50px
+  padding-bottom: 50px
+  .title
+    font-family: $second-family
+    font-weight: 600
+    font-size: 31px
+    line-height: 142%
+    color: $white
+    text-align: center
+    span
+      color: #fec087
+  &__box
+    display: grid
+    gap: 20px
+  &__desc
+    font-family: $font-family
+    font-weight: 600
+    font-size: 19px
+    line-height: 126%
+    color: $white
+  &__form
+    display: grid
+    gap: 20px
+  &__form-box
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    gap: 30px
+  &__form-input
+    border-radius: 5px
+    padding: 16px 20px
+    background: $white
+    font-family: $font-family
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
+    color: #221715
+    &::placeholder
+      font-family: $font-family
+      font-weight: 400
+      font-size: 16px
+      line-height: 150%
+      color: #221715
+  &__form-btn
+    border-radius: 5px
+    padding: 16px 20px
+    background: $button
+    font-family: $font-family
+    font-weight: 700
+    font-size: 16px
+    text-align: center
+    color: $h1-6
+  &__form-check label
+    font-family: $font-family
+    font-weight: 400
+    font-size: 15px
+    line-height: 120%
+    color: $white
+
+.reviews
+  display: flex
+  .swiper-reviews
+    padding-top: 40px
+    padding-bottom: 40px
+  .swiper-pagination-bullet
+    width: 30px
+    height: 3px
+    border-radius: 0
+    background: #6d6f7c
+  &__card
+    display: grid
+    gap: 20px
+    border-radius: 5px
+    fill: $white
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)
+    padding: 20px 20px 20px 32px
+  &__content-box
+    display: grid
+    gap: 20px
+  &__top
+    display: grid
+    grid-auto-flow: column
+    gap: 20px
+  &__name-box
+    display: grid
+    gap: 10px
+  &__img
+    border-radius: 100%
+    min-width: 103px
+    min-height: 103px
+    object-fit: cover
+  &__name
+    font-family: $second-family
+    font-weight: 600
+    font-size: 21px
+    line-height: 152%
+    color: $h1-6
+  &__city
+    font-family: $second-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 150%
+    color: $text
+  &__text
+    font-family: $font-family
+    font-weight: 400
+    font-size: 15px
+    color: $body-text
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 5
+    line-clamp: 5
+    -webkit-box-orient: vertical
+  &__btn
+    font-family: $font-family
+    font-weight: 700
+    font-size: 14px
+    line-height: 114%
+    text-align: center
+    color: $h1-6
+    border-radius: 50px
+    background: $button
+    text-decoration: none
+    padding: 6px 20px
+    justify-self: center
+
+.questions
+  margin-top: 40px
+  .acc_section
+    overflow: visible
+    background: $white
+    border-radius: 5px
+    border: 0
+    margin-bottom: 10px
+  &__title
+    font-family: $second-family
+    font-weight: 600
+    font-size: 21px
+    padding: 10px
+    line-height: 152%
+    color: $h1-6
+    position: relative
+    display: grid
+    grid-auto-flow: column
+    gap: 20px
+    justify-items: start
+    justify-content: start
+    &::before
+      display: grid
+      content: ""
+      background: url(/assets/img/questions.svg)
+      width: 35px
+      height: 35px
+  .acc_head
+    position: relative
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.15)
+    &::after
+      position: absolute
+      content: ""
+      background: url(/assets/img/accordion-arrow.svg)
+      width: 12px
+      height: 7.44px
+      right: 10px
+      top: 50%
+      transform: translateY(-50%)
+
+  .acc_content
+    background: #F5F5F5
+    // border-bottom-left-radius: 5px
+    // border-bottom-right-radius: 5px
+  .acc_section.acc_active > .acc_content
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+  &__open-item
+    padding-left: 94px
+    position: relative
+    font-family: $font-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 144%
+    color: $text2
+    &::before
+      content: ""
+      position: absolute
+      background: url(/assets/img/accordion-marker.svg)
+      width: 39px
+      height: 36px
+      top: 0
+      left: 40px
+
+.articles
+  margin-top: 40px
+  display: flex
+  &__card
+    display: grid
+    gap: 30px
+  &__img
+    border-radius: 5px
+    width: 100%
+    height: 237px
+    object-fit: cover
+  .swiper-articles
+    padding-top: 40px
+    padding-bottom: 40px
+  .swiper-pagination-bullet
+    width: 30px
+    height: 3px
+    border-radius: 0
+    background: #6d6f7c
+  &__content
+    display: grid
+    gap: 10px
+  &__title
+    font-family: $second-family
+    font-weight: 600
+    font-size: 21px
+    line-height: 152%
+    color: $h1-6
+  &__desc
+    font-family: $font-family
+    font-weight: 400
+    font-size: 15px
+    color: $body-text
+  &__date
+    font-family: $second-family
+    font-weight: 500
+    font-size: 14px
+    line-height: 171%
+    color: $text
+  &__link
+    font-family: $font-family
+    font-weight: 400
+    font-size: 15px
+    line-height: 120%
+    text-decoration: underline
+    text-decoration-skip-ink: none
+    color: #333643
+  &__link-view
+    position: relative
+    font-family: $font-family
+    font-weight: 400
+    font-size: 15px
+    line-height: 120%
+    color: #333643
+    display: grid
+    grid-auto-flow: column
+    gap: 5px
+    align-items: center
+    &::before
+      content: ""
+      background: url(/assets/img/view.svg)
+      width: 15px
+      height: 10px
+      display: grid
+  &__link-box
+    display: grid
+    grid-auto-flow: column
+    gap: 10px
+    justify-content: space-between
+
+.connect
+  background: url(/assets/img/connect.jpg)
+  width: 100%
+  min-height: 474px
+  background-position: center 26%
+  background-size: cover
+  background-repeat: no-repeat
+  padding-top: 57px
+  padding-bottom: 50px
+  &__question
+    font-family: $second-family
+    font-weight: 700
+    font-size: 40px
+    line-height: 100%
+    color: $white
+  &__left
+    display: grid
+    gap: 40px
+    max-width: 507px
+  &__box
+    display: grid
+    gap: 10px
+  &__title
+    font-family: $second-family
+    font-weight: 600
+    font-size: 27px
+    line-height: 126%
+    color: $button
+  &__desc
+    font-family: $font-family
+    font-weight: 600
+    font-size: 18px
+    line-height: 133%
+    color: $white
+  &__list
+    display: grid
+    gap: 20px
+  &__item
+    display: grid
+    grid-auto-flow: column
+    gap: 20px
+    align-items: center
+    justify-items: start
+    justify-content: start
+  &__item-text
+    font-family: $second-family
+    font-weight: 500
+    font-size: 18px
+    line-height: 150%
+    color: $white
+  &__block
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    align-items: start
+  &__form
+    display: grid
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+    background: $white
+    border-radius: 5px
+    max-width: 345px
+    justify-self: end
+    padding: 30px 20px
+    align-items: start
+    gap: 30px
+  &__form-title
+    font-family: $second-family
+    font-weight: 600
+    font-size: 24px
+    color: $h1-6
+    line-height: 28px
+  &__form-box
+    display: grid
+    gap: 20px
+  &__form-btn
+    font-family: $font-family
+    font-weight: 700
+    font-size: 14px
+    line-height: 114%
+    text-align: center
+    color: $h1-6
+    border-radius: 50px
+    padding: 10px 30px
+    background: $button
+    justify-self: center
+  &__form-input
+    border-radius: 5px
+    border: 1px solid #aab2c2
+    padding: 9px 10px 9px 38px
+    background-position: 10px center
+    background-repeat: no-repeat
+    &.name
+      background-image: url(/assets/img/name.svg)
+    &.tel
+      background-image: url(/assets/img/tel.svg)
+  &__form-check
+    label
+      font-family: $font-family
+      font-weight: 400
+      font-size: 13px
+      line-height: 123%
+      color: #312c2b
+    .custom-checkbox+label
+      display: inline-flex
+      align-items: center
+      user-select: none
+      cursor: pointer
+      &::before
+        content: ''
+        display: inline-block
+        border: 1px solid #b3bcc0
+        border-radius: 3px
+        width: 16px
+        height: 16px
+        flex-shrink: 0
+        flex-grow: 0
+        margin-right: 0.5em
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 50% 50%
+        transition: border $anim

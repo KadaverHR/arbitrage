@@ -1,0 +1,75 @@
+.footer
+	background: #292d38
+	padding-top: 40px
+	padding-bottom: 26px
+	&__box
+		display: grid
+		grid-template-columns: repeat(3, auto)
+		gap: 20px
+		justify-content: space-between
+		align-items: start
+		padding-bottom: 30px
+	&__requisites-box
+		display: grid
+		gap: 15px
+	&__requisites
+		font-family: $second-family
+		font-weight: 400
+		font-size: 13px
+		line-height: 123%
+		color: $white
+		&.big
+			font-size: 15px
+			font-family: $font-family
+	&__center
+		display: grid
+		gap: 15px
+	&__link
+		font-family: $font-family
+		font-weight: 400
+		font-size: 15px
+		line-height: 120%
+		color: $white
+		text-decoration: none
+	&__contact-box
+		display: grid
+		gap: 15px
+		justify-items: start
+	&__docs-box
+		display: grid
+		gap: 15px
+		justify-content: start
+		justify-items: start
+	&__docs
+		font-family: $font-family
+		font-weight: 400
+		font-size: 15px
+		line-height: 120%
+		color: $white
+		position: relative
+		display: grid
+		grid-auto-flow: column
+		gap: 5px
+		align-items: center
+		text-decoration: none
+		&::before
+			content: ""
+			width: 9px
+			height: 9px
+			border-radius: 50%
+			background: #fff
+	&__right
+		display: grid
+		gap: 15px
+	&__bottom-text
+		font-family: $font-family
+		font-weight: 400
+		font-size: 13px
+		line-height: 123%
+		color: #8f95a8
+		.footer__bottom-link
+			color: #fff
+			text-decoration: none
+	&__bottom
+		padding-top: 20px
+		border-top: 1px solid #fff

@@ -42,11 +42,25 @@ $(document).ready(function () {
       // The section open on first init. A number from 1 to X or false.(data-active-index)
       activeIndex: false,
 
-
     });
   });
 
+  jQuery(document).ready(function ($) {
+    $("#questions").accordionjs({
+      // Allow self close.(data-close-able)
+      closeAble: true,
 
+      // Close other sections.(data-close-other)
+      closeOther: true,
+
+      // Animation Speed.(data-slide-speed)
+      slideSpeed: 150,
+
+      // The section open on first init. A number from 1 to X or false.(data-active-index)
+      activeIndex: false,
+
+    });
+  });
 
 
   // Слайдер баннер
@@ -85,6 +99,104 @@ $(document).ready(function () {
   });
 
 
+  new Swiper(".swiper-case", {
+
+
+    // navigation: {
+    //   nextEl: ".swiper-staff__swiper-button-next",
+    //   prevEl: ".swiper-staff__swiper-button-prev",
+    // },
+    pagination: {
+      el: '.swiper-case__swiper-pagination',
+      clickable: true
+    },
+
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      891: {
+        slidesPerView: 3,
+      },
+      1920: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  
+  new Swiper(".swiper-articles", {
+
+
+    // navigation: {
+    //   nextEl: ".swiper-staff__swiper-button-next",
+    //   prevEl: ".swiper-staff__swiper-button-prev",
+    // },
+    pagination: {
+      el: '.swiper-articles__swiper-pagination',
+      clickable: true
+    },
+
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      891: {
+        slidesPerView: 3,
+      },
+      1920: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+
+  // reviews
+  new Swiper(".swiper-reviews", {
+
+
+    // navigation: {
+    //   nextEl: ".swiper-staff__swiper-button-next",
+    //   prevEl: ".swiper-staff__swiper-button-prev",
+    // },
+    pagination: {
+      el: '.swiper-reviews__swiper-pagination',
+      clickable: true
+    },
+
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      891: {
+        slidesPerView: 3,
+      },
+      1920: {
+        slidesPerView: 3,
+      },
+    },
+  });
 
   // Бургер
   // let burger = document.querySelector('.burger');
