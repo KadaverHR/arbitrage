@@ -1,357 +1,201 @@
-{% set title = "Услуги" %}
-{% set bodyClass = "is-services-page" %}
+{% set title = "О компании" %}
+{% set bodyClass = "is-about-page" %}
 
 {% extends "html/layouts/default.html" %}
 
 {% block content %}
 
 
-<section class="services-page">
+<section class="about-page">
   <div class="container">
     {% include "html/includes/breadcrumbs.html" %}
     <h1 class="title">
-      <span class="title-bg">Услуги</span>
+      <span class="title-bg">О компании</span>
     </h1>
 
-    <div class="services-page__text-box">
-      <p class="services-page__text">
-        Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы законодательства. Обо всех
-        возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в нашем офисе.
+    <div class="about-page__text-box">
+      <img class="about-page__img-top" src="assets/img/about-top.jpg" alt="">
+      <p class="about-page__text">
+        <span>«Технология банкротства» </span> — сервис <strong>подбора арбитражных управляющих</strong>
+        без посредников и переплат.
       </p>
-      <p class="services-page__text">
-        Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы законодательства. Обо всех
-        возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в нашем офисе.
+      <p class="about-page__text">
+        С целью оптимального выбора арбитражного управляющего для каждого клиента, используется авторская разработка
+        искусственного интеллекта. Данный подход позволяет получить выборку из арбитражных управляющих, способных
+        провести процедуру банкротства, обладающими необходимым опытом в каждом конкретном регионе страны.
+      </p>
+      <p class="about-page__text">
+        Для создания сервиса была сформирована команда из числа опытных арбитражных управляющих, юристов, налоговых
+        консультантов, бухгалтеров, разработчиков.
+      </p>
+      <p class="about-page__text">
+        Миссия сервиса: «Обеспечить каждому гражданину оптимальный подбор арбитражного управляющего, для комфортного
+        прохождения процедуры банкротства, без посредников и переплат».
       </p>
     </div>
 
 
-    <ul class="services-page__list">
-      <li class="services-page__item">
-        <img class="services-page__img" src="assets/img/services1.svg" alt="">
-        <p class="services-page__item-text">
-          Бесплатная <br>
-          консультация
+    <ul class="about-page__list">
+      <li class="about-page__item">
+        <img class="about-page__img" src="assets/img/about1.svg" alt="">
+        <p class="about-page__item-title">
+          <span>> 13</span>
+          млрд.рублей
+        </p>
+        <p class="about-page__item-text">
+          долговых <br>
+          обязанностей списано
         </p>
       </li>
-      <li class="services-page__item">
-        <img class="services-page__img" src="assets/img/services2.svg" alt="">
-        <p class="services-page__item-text">
-          Банкротство физических лиц с ипотекой
+      <li class="about-page__item">
+        <img class="about-page__img" src="assets/img/about2.svg" alt="">
+        <p class="about-page__item-title">
+          <span> > 1 </span>
+          млн.граждан
+        </p>
+        <p class="about-page__item-text">
+          освободились<br>
+          от долгов
         </p>
       </li>
-      <li class="services-page__item">
-        <img class="services-page__img" src="assets/img/services3.svg" alt="">
-        <p class="services-page__item-text">
-          Банкротство поручителя физического лица
+      <li class="about-page__item">
+        <img class="about-page__img" src="assets/img/about1.svg" alt="">
+        <p class="about-page__item-title">
+          <span> > 9 </span>
+
+          лет
+        </p>
+        <p class="about-page__item-text">
+          успешной работы<br>
+          закона о банкротстве
         </p>
       </li>
-      <li class="services-page__item">
-        <img class="services-page__img" src="assets/img/services4.svg" alt="">
-        <p class="services-page__item-text">
-          Внесудебное банкротство физических лиц
-        </p>
-      </li>
-      <li class="services-page__item">
-        <img class="services-page__img" src="assets/img/services5.svg" alt="">
-        <p class="services-page__item-text">
-          Упрощенная процедура банкротства
-        </p>
-      </li>
-      <li class="services-page__item">
-        <img class="services-page__img" src="assets/img/services6.svg" alt="">
-        <p class="services-page__item-text">
-          Списание долгов по кредитам
-        </p>
-      </li>
+
 
     </ul>
 
 
+    <p class="about-page__list-desc">
+      Главное достоинство нашей компании - гарантии!
+    </p>
+
   </div>
 </section>
 
-<section class="white section">
+<section class="gray section">
   <div class="container">
     <div class="title-wrapper">
-      <h2 class="title marker subtitle">
-        <span class="title-bg">Услуги и </span> цены
+      <h2 class="title subtitle">
+        <span class="title-bg">История компании</span>
       </h2>
-      <a class="title-wrapper__link" href="">
-        Все услуги
-      </a>
     </div>
 
-    <ul class="accordion" id="accordion" class="accordionjs">
+
+    <div class="about-page swiper">
+      <p class="about-page__text">
+        Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы законодательства. Обо всех
+        возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в нашем офисе.
+      </p>
+      <p class="about-page__text">
+        Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы законодательства. Обо всех
+        возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в нашем офисе.
+      </p>
+    </div>
+
+    <div class="about-page__tab-box">
+      <div class="tab">
+        <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-1">2015</label>
+
+        <input id="tab-btn-2" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-2">2017</label>
+
+        <input id="tab-btn-3" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-3">2018</label>
+
+        <input id="tab-btn-4" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-4">2019</label>
+
+        <input id="tab-btn-5" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-5">2020</label>
+
+        <input id="tab-btn-6" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-6">2021</label>
+
+        <input id="tab-btn-7" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-7">2022</label>
+
+        <input id="tab-btn-8" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-8">2023</label>
+
+        <input id="tab-btn-9" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-9">2024</label>
 
 
-      <li class="accordion__item">
-        <div class="accordion__title-box">
-          <p class="accordion__title">Консультация юриста по банкротству физических лиц </p>
-          <p class="accordion__price"> от 9 000 Р</p>
-        </div>
-        <div>
-          <div class="accordion__open">
-            <ul class="accordion__open-list">
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-            </ul>
-            <a class="accordion__open-link" href="">
-              Подробнее об услуге
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="accordion__item">
-        <div class="accordion__title-box">
-          <p class="accordion__title">Консультация юриста по банкротству физических лиц </p>
-          <p class="accordion__price"> от 9 000 Р</p>
-        </div>
-        <div>
-          <div class="accordion__open">
-            <ul class="accordion__open-list">
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-            </ul>
-            <a class="accordion__open-link" href="">
-              Подробнее об услуге
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="accordion__item">
-        <div class="accordion__title-box">
-          <p class="accordion__title">Консультация юриста по банкротству физических лиц </p>
-          <p class="accordion__price"> от 9 000 Р</p>
-        </div>
-        <div>
-          <div class="accordion__open">
-            <ul class="accordion__open-list">
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-            </ul>
-            <a class="accordion__open-link" href="">
-              Подробнее об услуге
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="accordion__item">
-        <div class="accordion__title-box">
-          <p class="accordion__title">Консультация юриста по банкротству физических лиц </p>
-          <p class="accordion__price"> от 9 000 Р</p>
-        </div>
-        <div>
-          <div class="accordion__open">
-            <ul class="accordion__open-list">
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-            </ul>
-            <a class="accordion__open-link" href="">
-              Подробнее об услуге
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="accordion__item">
-        <div class="accordion__title-box">
-          <p class="accordion__title">Консультация юриста по банкротству физических лиц </p>
-          <p class="accordion__price"> от 9 000 Р</p>
-        </div>
-        <div>
-          <div class="accordion__open">
-            <ul class="accordion__open-list">
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-            </ul>
-            <a class="accordion__open-link" href="">
-              Подробнее об услуге
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="accordion__item">
-        <div class="accordion__title-box">
-          <p class="accordion__title">Консультация юриста по банкротству физических лиц </p>
-          <p class="accordion__price"> от 9 000 Р</p>
-        </div>
-        <div>
-          <div class="accordion__open">
-            <ul class="accordion__open-list">
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-              <li class="accordion__open-item">
-                Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы
-                законодательства.
-                Обо
-                всех
-                возможностях положительного решения вашего вопроса мы ознакомим Вас на бесплатной консультации в
-                нашем
-                офисе.
-              </li>
-            </ul>
-            <a class="accordion__open-link" href="">
-              Подробнее об услуге
-            </a>
-          </div>
-        </div>
-      </li>
 
-    </ul>
 
-  </div>
-</section>
+        <div class="tab-content" id="content-1">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
+        <div class="tab-content" id="content-2">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
+        <div class="tab-content" id="content-3">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
+        <div class="tab-content" id="content-4">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
+        <div class="tab-content" id="content-5">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
+        <div class="tab-content" id="content-6">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
+        <div class="tab-content" id="content-7">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
+        <div class="tab-content" id="content-8">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
+        <div class="tab-content" id="content-9">
+          Выпущено несколько новых продуктов по автоматизации юридических процессов - оспаривание автоштрафов,
+          банкротство
+          физического лица. Преодолена планка в 2,5 млрд. списанных долгов нашим клиентам по банкротству физических
+          лиц.
+        </div>
 
-<div class="container">
-  <hr class="border">
-</div>
 
-<section class="white section">
-  <div class="container border">
-    <div class="trust">
-      <div class="trust__block">
-        <h2 class="title marker">
-          <span class="title-bg">Почему </span> стоит довериться нам
-        </h2>
-        <p class="trust__text">
-          Благодаря большому опыту
-          и продолжительной эффективной работе, мы изучили все нюансы законодательства.
-        </p>
-        <p class="trust__text">
-          Обо всех возможностях положительного решения вашего вопроса мы ознакомим Вас на <a class="trust__link"
-            href="">бесплатной консультации</a> в
-          нашем
-          офисе.
-        </p>
       </div>
-      <ul class="trust__list">
-        <li class="trust__item">
-          <p class="trust__item-title">
-            150 дел
-          </p>
-          <p class="trust__item-text">
-            Мы возлагаем на себя всю работу
-            с финансовыми организаиями вместо Вас
-          </p>
-        </li>
-        <li class="trust__item">
-          <p class="trust__item-title">
-            Свой
-          </p>
-          <p class="trust__item-text">
-            Мы возлагаем на себя всю работу
-            с финансовыми организаиями вместо Вас
-          </p>
-        </li>
-        <li class="trust__item">
-          <p class="trust__item-title">
-            Под ключ
-          </p>
-          <p class="trust__item-text">
-            Мы возлагаем на себя всю работу
-            с финансовыми организаиями вместо Вас
-          </p>
-        </li>
-        <li class="trust__item">
-          <p class="trust__item-title">
-            Без доплат
-          </p>
-          <p class="trust__item-text">
-            Мы возлагаем на себя всю работу
-            с финансовыми организаиями вместо Вас
-          </p>
-        </li>
-
-      </ul>
     </div>
-  </div>
 </section>
+
+
+
 
 
 {% endblock %}

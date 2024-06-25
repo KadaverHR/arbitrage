@@ -1,0 +1,64 @@
+.about-page
+  padding-top: 40px
+  padding-bottom: 60px
+  &__img-top
+    float: left
+    margin: 0px 30px 16px 0px
+    border-radius: 5px
+    max-width: 350px
+    max-height: 248px
+    object-fit: cover
+  &__text
+    margin-bottom: 10px
+    font-family: $font-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 144%
+    color: $body-text
+    &:last-child
+      margin-bottom: 0
+    span
+      font-weight: 700
+      color: #f47500
+    strong
+      font-weight: 700
+  &__list
+    display: grid
+    grid-template-columns: repeat(3,auto)
+    gap: 30px
+    justify-content: space-between
+    padding-top: 60px
+    padding-bottom: 40px
+  &__item
+    display: grid
+    justify-items: center
+    gap: 15px
+  &__item-title
+    margin-top: 5px
+    font-family: $second-family
+    font-weight: 700
+    font-size: 18px
+    line-height: 122%
+    text-transform: uppercase
+    text-align: center
+    color: rgba(244, 117, 0, 1)
+    span
+      font-size: 38px
+  &__item-text
+    font-family: $font-family
+    font-weight: 600
+    font-size: 16px
+    line-height: 162%
+    text-transform: uppercase
+    text-align: center
+    color: $text2
+  &__list-desc
+    font-family: $second-family
+    font-weight: 600
+    font-size: 24px
+    text-align: center
+    color: $h1-6
+  &__text-box.swiper
+    padding-top: 20px
+  &__tab-box
+    background: $white
