@@ -1,26 +1,73 @@
 {% set title = "Описание изобретения" %}
-{% set bodyClass = "is-new-page" %}
+{% set bodyClass = "is-articles-page" %}
 
 {% extends "html/layouts/default.html" %}
 
 {% block content %}
 
 
-<section class="new-page">
+<section class="articles-page">
   <div class="container">
     {% include "html/includes/breadcrumbs.html" %}
 
     <div class="new-page__img-box">
       <img src="assets/img/new.jpg" alt="">
     </div>
-    <div class="title-wrapper date">
+    <div class="title-wrapper">
       <h2 class="title">
-        <span class="title-bg">Популярные статьи</span>
+        <span class="title-bg">Описание изобретения</span>
       </h2>
-      <span class="title-wrapper__date">
-        15.03.2023
-        </a>
     </div>
+
+    <div class="articles-page__author-box">
+
+      <div class="articles-page__author-block">
+        <img src="assets/img/author-ing.jpg" alt="">
+        <div class="articles-page__author-content">
+          <p class="articles-page__author-title">
+            Автор статьи
+          </p>
+          <p class="articles-page__author-text">
+            Кондратьева Инна
+          </p>
+        </div>
+      </div>
+
+
+      <div class="articles-page__author-block">
+        <div class="articles-page__author-content">
+          <p class="articles-page__author-title">
+            Время прочтения
+          </p>
+          <p class="articles-page__author-text time">
+            5 мин
+          </p>
+        </div>
+      </div>
+
+      <div class="articles-page__author-block">
+        <div class="articles-page__author-content">
+          <p class="articles-page__author-title">
+            Просмотры
+          </p>
+          <p class="articles-page__author-text view">
+            371
+          </p>
+        </div>
+      </div>
+      <div class="articles-page__author-block">
+        <div class="articles-page__author-content">
+          <p class="articles-page__author-title">
+            Дата публикации
+          </p>
+          <p class="articles-page__author-text date">
+            25.02.2024
+          </p>
+        </div>
+      </div>
+
+    </div>
+
     <div class="new-page__text-box">
       <p class="new-page__text">
         Благодаря большому опыту и продолжительной эффективной работе, мы изучили все нюансы законодательства. Обо всех

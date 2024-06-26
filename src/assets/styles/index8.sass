@@ -1,3 +1,41 @@
 .new-page
   padding-top: 40px
   padding-bottom: 60px
+  .date
+    padding-top: 40px
+    padding-bottom: 10px
+    display: grid
+    gap: 15px
+    justify-content: start
+    align-items: baseline
+    .title
+      position: relative
+      &::before
+        position: absolute
+        content: ""
+        width: 2px
+        height: 28px
+        background: #c2c2c2
+        right: -10px
+        top: 15px
+  &__date
+    font-family: $font-family
+    font-weight: 600
+    font-size: 13px
+    line-height: 138%
+    text-transform: uppercase
+    color: $body-text
+  &__text-box
+    display: grid
+    gap: 10px
+  &__text
+    font-family: $font-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 144%
+    color: $body-text
+    strong
+      font-weight: 700
+  &__link
+    text-decoration: underline
+    color: #f47500

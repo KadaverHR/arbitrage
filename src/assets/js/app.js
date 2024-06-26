@@ -232,6 +232,39 @@ $(document).ready(function () {
   });
 
 
+  new Swiper(".swiper-partners", {
+
+
+    // navigation: {
+    //   nextEl: ".swiper-staff__swiper-button-next",
+    //   prevEl: ".swiper-staff__swiper-button-prev",
+    // },
+    pagination: {
+      el: '.swiper-partners__swiper-pagination',
+      clickable: true
+    },
+
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      891: {
+        slidesPerView: 4,
+      },
+      1920: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+
   //tabs
 
   let tab = document.querySelectorAll('.tab-btn')
