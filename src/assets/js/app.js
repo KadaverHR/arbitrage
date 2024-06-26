@@ -131,7 +131,7 @@ $(document).ready(function () {
     },
   });
 
-  
+
   new Swiper(".swiper-articles", {
 
 
@@ -197,6 +197,72 @@ $(document).ready(function () {
       },
     },
   });
+
+
+  new Swiper(".swiper-certificates", {
+
+
+    // navigation: {
+    //   nextEl: ".swiper-staff__swiper-button-next",
+    //   prevEl: ".swiper-staff__swiper-button-prev",
+    // },
+    pagination: {
+      el: '.swiper-certificates__swiper-pagination',
+      clickable: true
+    },
+
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      891: {
+        slidesPerView: 3,
+      },
+      1920: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+
+  //tabs
+
+  let tab = document.querySelectorAll('.tab-btn')
+  let tabContent = document.querySelectorAll('.tab-content')
+
+  if (tab) {
+    tab.forEach(elem => {
+      elem.addEventListener('click', () => {
+
+        let parantElem = elem.parentElement.querySelectorAll('.tab-btn')
+        parantElem.forEach(pElement => {
+          pElement.classList.remove('active')
+        });
+        let btnId = elem.getAttribute('id')
+        elem.classList.add('active')
+        tabContent.forEach(i => {
+          let contentId = i.getAttribute('data-id')
+          i.classList.add('d-n')
+          if (btnId == contentId) {
+            i.classList.remove('d-n')
+          }
+        });
+
+      })
+    });
+  }
+
+
+
+
+
 
   // Бургер
   // let burger = document.querySelector('.burger');

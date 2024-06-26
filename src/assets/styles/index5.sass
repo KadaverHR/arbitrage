@@ -58,7 +58,64 @@
     font-size: 24px
     text-align: center
     color: $h1-6
-  &__text-box.swiper
+  &__text-box
     padding-top: 20px
   &__tab-box
     background: $white
+    margin-top: 40px
+    padding: 6px 20px 20px 20px
+    border-radius: 5px
+  &__btn-box
+    display: grid
+    grid-auto-flow: column
+    justify-content: space-between
+    gap: 10px
+    padding-bottom: 10px
+    border-bottom: 1px solid #d6d6d6
+    .tab-btn
+      font-family: $second-family
+      font-weight: 600
+      font-size: 21px
+      line-height: 152%
+      color: $h1-6
+      position: relative
+      transition: color $anim
+      &::before
+        content: ""
+        position: absolute
+        border-radius: 16px
+        width: 17px
+        height: 6px
+        background: #d9d9d9
+        bottom: -13px
+        left: 50%
+        transform: translateX(-50%)
+        transition: background $anim, width $anim
+      &.active
+        color: #f47500
+        &::before
+          width: 100%
+          background: $button
+  &__tab-content
+    font-family: $font-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 144%
+    color: $body-text
+    margin-top: 20px
+    span
+      font-weight: 700
+
+.certificates
+  display: flex
+  .swiper-certificates
+    padding-top: 40px
+    padding-bottom: 40px
+  .swiper-pagination-bullet
+    width: 30px
+    height: 3px
+    border-radius: 0
+    background: #6d6f7c
+  &__card
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.15)
+    border-radius: 5px
