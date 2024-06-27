@@ -4,4 +4,147 @@
   .title-wrapper
     padding-top: 40px
   &__author-box
-    
+    margin-top: 20px
+    margin-bottom: 30px
+    display: grid
+    padding: 20px
+    background: $white
+    border-radius: 5px
+    grid-template-columns: repeat(4,auto)
+    justify-content: space-between
+    align-items: center
+  &__author-photo
+    border-radius: 50%
+    padding: 4px
+    border: 1px solid #cacbd0
+  &__author-block
+    display: grid
+    gap: 20px
+    grid-auto-flow: column
+    align-items: center
+  &__author-content
+    display: grid
+    gap: 5px
+  &__author-title
+    font-family: $font-family
+    font-weight: 600
+    font-size: 19px
+    line-height: 126%
+    color: $body-text
+  &__author-text
+    font-family: $second-family
+    font-weight: 500
+    font-size: 14px
+    line-height: 129%
+    color: $text
+    display: grid
+    grid-auto-flow: column
+    justify-items: start
+    justify-content: start
+    align-items: center
+    gap: 5px
+    &.time
+      position: relative
+      &::before
+        display: block
+        content: ""
+        background: url(/assets/img/articles-time.svg)
+        width: 14px
+        height: 14px
+        background-repeat: no-repeat
+        background-position: center
+    &.view
+      position: relative
+      &::before
+        display: block
+        content: ""
+        background: url(/assets/img/view.svg)
+        width: 14px
+        height: 14px
+        background-repeat: no-repeat
+        background-position: center
+    &.date
+      position: relative
+      &::before
+        display: block
+        content: ""
+        background: url(/assets/img/date.svg)
+        width: 14px
+        height: 14px
+        background-repeat: no-repeat
+        background-position: center
+
+  &__toc-title
+    font-family: $second-family
+    font-weight: 600
+    font-size: 21px
+    line-height: 152%
+    color: $h1-6
+    margin-block-start: 0
+    margin-block-end: 0
+  &__toc-list
+    display: grid
+    gap: 10px
+    padding-top: 10px
+    padding-bottom: 30px
+    border-bottom: 1px solid #d6d6d6
+    &.sublist
+      padding-bottom: 0
+      padding-left: 40px
+      border-bottom: 0
+      .articles-page__toc-text
+        position: relative
+        &::before
+          background: #fff
+          border: 2px solid $button
+          width: 8px
+          height: 8px
+  &__toc-text
+    font-family: $font-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 144%
+    color: $body-text
+    padding-left: 20px
+    position: relative
+    &::before
+      position: absolute
+      content: ""
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $button
+      top: 8px
+      left: 0
+  &__content-box
+    padding-top: 30px
+    display: grid
+  &__text-box
+    display: grid
+    gap: 10px
+    padding: 20px 0
+  &__social-box
+    padding: 5px 20px 5px 10px
+    border-radius: 5px
+    background: #feead8
+    display: grid
+    grid-auto-flow: column
+    gap: 20px
+    align-items: center
+    justify-self: end
+  &__social-links
+    display: grid
+    grid-auto-flow: column
+    gap: 15px
+    align-items: center
+  &__social-title
+    font-family: $font-family
+    font-weight: 700
+    font-size: 18px
+    line-height: 144%
+    color: #333643
+
+
+.is-price-page
+  .services-page__text-box
+    padding-bottom: 40px
