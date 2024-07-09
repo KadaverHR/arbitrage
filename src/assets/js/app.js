@@ -81,15 +81,18 @@ $(document).ready(function () {
     spaceBetween: 30,
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       768: {
+        slidesPerView: 2,
+      },
+      992: {
         slidesPerView: 3,
       },
-      891: {
+      1406: {
         slidesPerView: 3,
       },
       1920: {
@@ -100,34 +103,63 @@ $(document).ready(function () {
 
 
   new Swiper(".swiper-case", {
-
-
-    // navigation: {
-    //   nextEl: ".swiper-staff__swiper-button-next",
-    //   prevEl: ".swiper-staff__swiper-button-prev",
-    // },
     pagination: {
       el: '.swiper-case__swiper-pagination',
+      clickable: true
+    },
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1015: {
+        slidesPerView: 2,
+      },
+   
+    },
+  });
+
+
+
+
+  let widthWindow = window.innerWidth
+  let experienceSwiper = document.querySelector('.swiper-trigger')
+  let experienceGrid = document.querySelector('.experience__list')
+  console.log(widthWindow);
+  if (widthWindow < 1439.9) {
+    experienceSwiper.classList.add('swiper-experience')
+    experienceSwiper.classList.add('swiper')
+    experienceGrid.classList.remove('experience__list')
+
+  }
+
+
+  new Swiper(".swiper-experience", {
+    pagination: {
+      el: '.swiper-experience__swiper-pagination',
       clickable: true
     },
 
     spaceBetween: 30,
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       768: {
         slidesPerView: 3,
       },
       891: {
-        slidesPerView: 3,
-      },
-      1920: {
-        slidesPerView: 3,
-      },
+        slidesPerView: 4,
+      }
     },
   });
 
@@ -147,15 +179,15 @@ $(document).ready(function () {
     spaceBetween: 30,
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 3,
+        slidesPerView: 1,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
-      891: {
+      992: {
         slidesPerView: 3,
       },
       1920: {
@@ -181,13 +213,13 @@ $(document).ready(function () {
     spaceBetween: 30,
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       891: {
         slidesPerView: 3,
@@ -214,13 +246,13 @@ $(document).ready(function () {
     spaceBetween: 30,
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       891: {
         slidesPerView: 3,
@@ -294,27 +326,44 @@ $(document).ready(function () {
 
 
 
+  var acc = document.getElementsByClassName("accordion-mob");
+  var i;
 
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
 
 
   // Бургер
-  // let burger = document.querySelector('.burger');
-  // let menu = document.querySelector('.header__mobile');
-  // let menuLinks = menu.querySelectorAll('.header__link');
+  let burger = document.querySelector('#hamburger-menu-mob');
+  let menu = document.querySelector('#catalog-drop-mob');
+  let menuLinks = menu.querySelectorAll('.catalog-link');
+  let closeMenu = menu.querySelector('#close-mob')
 
-  // burger.addEventListener('click', function () {
-  //   burger.classList.toggle('burger--active');
-  //   menu.classList.toggle('header__mobile--active');
-  //   document.body.classList.toggle('stop-scroll');
-  // });
+  burger.addEventListener('click', function () {
+    menu.classList.toggle('active');
+    document.body.classList.toggle('stop-scroll');
+  });
 
-  // menuLinks.forEach(function (el) {
-  //   el.addEventListener('click', function () {
-  //     burger.classList.remove('burger--active');
-  //     menu.classList.remove('header__mobile--active');
-  //     document.body.classList.remove('stop-scroll');
-  //   });
-  // });
+  closeMenu.addEventListener('click', function () {
+    menu.classList.toggle('active');
+    document.body.classList.toggle('stop-scroll');
+  });
+
+  menuLinks.forEach(function (el) {
+    el.addEventListener('click', function () {
+      menu.classList.remove('active');
+      document.body.classList.remove('stop-scroll')
+    })
+  });
 
 
 

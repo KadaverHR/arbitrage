@@ -11,11 +11,19 @@
 		gap: 50px
 		@media all and ($l)
 			gap: 40px
+		@media all and ($m)
+			grid-template-columns: 182px auto auto
 	&__bottom
 		box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
 		width: 100%
 		padding: 22px 0
 		background: $white
+	&__bottom-mob
+		display: none
+		@media all and ($m)
+			display: grid
+			grid-template-columns: auto 1fr
+			gap: 20px
 .header-top
 	&__col
 		display: grid
@@ -24,6 +32,8 @@
 			min-width: 424px
 			@media all and ($l)
 				min-width: 269px
+			@media all and ($m)
+				display: none
 
 	&__serch-desc
 		display: grid
@@ -75,6 +85,9 @@
 		gap: 10px
 		align-items: center
 		text-decoration: none
+	&__btn-box
+		width: 100%
+		display: grid
 	&__btn
 		border: 1px solid $btn-active
 		border-radius: 50px
@@ -106,6 +119,11 @@
 			background: #727584
 		&:last-child::after
 			display: none
+		@media all and ($l)
+			&:nth-last-child(2)::after
+				display: none
+			&::after
+				right: -10px
 
 	&__link
 		font-family: $second-family
@@ -116,3 +134,133 @@
 		color: $h1-6
 		text-decoration: none
 		white-space: nowrap
+	&__bottom-nav
+		@media all and ($m)
+			display: none
+
+.header-btm-mob
+	display: none
+	background: #5D6877
+	padding: 5px 0
+	@media all and ($s)
+		display: block
+	&__box
+		display: grid
+		grid-auto-flow: column
+		grid-template-rows: 1fr
+		grid-template-columns: 18px auto
+		gap: 20px
+	.header-btm__search--mob
+		display: none
+		@media all and ($s)
+			display: grid
+			max-width: none
+		.search-area
+			width: 100%
+			max-width: none
+			position: relative
+			visibility: visible
+			transform: translateY(-50%)
+			top: 50%
+		.search__input
+			padding: 5px 10px
+		.search
+			border: 1px solid #AAB2C2
+.catalog-mobile
+	&__logo
+		display: grid
+		gap: 20px
+		grid-auto-flow: column
+		justify-content: space-between
+		grid-template-columns: 1fr
+		img
+			max-width: 236px
+	&__logo-link
+		display: grid
+		justify-content: start
+	&__logo-close
+		background: none
+		position: absolute
+		right: 16px
+		top: 23px
+		img
+			width: 18px
+			height: 18px
+	&__container
+		position: fixed
+		align-content: start
+		left: 0
+		top: 0
+		width: 100%
+		height: 100vh
+		z-index: 1000
+		padding-top: 15px
+		background-color: #292d38
+		position: absolute
+		display: grid
+		gap: 40px
+		overflow-y: auto
+		visibility: hidden
+		transform: translateX(-120%)
+		transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out
+	&__container.active
+		visibility: visible
+		transform: none
+	&__menu-link
+		font-family: $font-family
+		font-weight: 400
+		font-size: 15px
+		line-height: 120%
+		text-align: center
+		color: $white
+		text-decoration: none
+		&:active, &:hover, &:focus
+			color: $button
+	&__button
+		padding-bottom: 20px
+	&__links
+		display: grid
+		padding-bottom: 20px
+		gap: 10px
+	&__catalog-link
+		font-family: $font-family
+		font-weight: 400
+		font-size: 15px
+		line-height: 120%
+		color: $white
+		text-decoration: none
+		transition: color $anim
+		&:active, &:hover, &:focus
+			color: $button
+
+.stop-scroll
+	overflow: hidden
+
+.panel
+	display: grid
+	padding: 0 30px
+	max-height: 0
+	overflow: hidden
+	transition: max-height 0.3s ease-out
+
+.accordion-mob
+	cursor: pointer
+	width: 100%
+	border: none
+	text-align: left
+	outline: none
+	position: relative
+	transition: color $anim
+	border-radius: 0
+	border: none
+	margin-top: 0
+	&::before
+		content: ""
+		position: absolute
+		background: url(../../assets/img/accordion.svg)
+		width: 14px
+		height: 8px
+		background-repeat: no-repeat
+		background-position: center
+		right: 0
+		top: 7px

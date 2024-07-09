@@ -7,12 +7,26 @@
   padding-top: 100px
   padding-bottom: 100px
   position: relative
+  @media all and ($l)
+    padding-top: 88px
+    padding-bottom: 88px
+  @media all and ($m)
+    height: 574px
+    background-position: left center
+    padding-top: 73px
+    padding-bottom: 73px
+  @media all and ($s)
+    padding-top: 38px
+    padding-bottom: 38px
   &__content
     max-width: 509px
     display: grid
     gap: 40px
     justify-items: start
     justify-content: start
+    @media all and ($m)
+      gap: 30px
+
   &__title
     font-family: $second-family
     font-weight: 700
@@ -20,6 +34,12 @@
     line-height: 112%
     color: $h1-6
     z-index: 1
+    @media all and ($m)
+      font-size: 40px
+      line-height: 130%
+    @media all and ($s)
+      font-size: 30px
+      line-height: 127%
   &__list
     display: grid
     gap: 20px
