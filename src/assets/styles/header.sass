@@ -4,6 +4,13 @@
 		background: linear-gradient(90deg, #59585a 0%, #585455 100%)
 		padding-top: 25px
 		padding-bottom: 20px
+	&__top-mob
+		display: none
+		@media all and ($s)
+			display: grid
+			grid-template-columns: 1fr auto
+			justify-content: space-between
+			gap: 10px
 	&__top-box
 		display: grid
 		grid-template-columns: 182px auto auto auto
@@ -13,6 +20,9 @@
 			gap: 40px
 		@media all and ($m)
 			grid-template-columns: 182px auto auto
+		@media all and ($s)
+			display: none
+
 	&__bottom
 		box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
 		width: 100%
@@ -126,6 +136,7 @@
 				right: -10px
 
 	&__link
+		cursor: pointer
 		font-family: $second-family
 		font-weight: 700
 		font-size: 15px
@@ -134,6 +145,22 @@
 		color: $h1-6
 		text-decoration: none
 		white-space: nowrap
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			bottom: -3px
+			width: 0
+			height: 4px
+			left: 50%
+			transform: translate(-50%)
+			transition: width $anim
+			background: $button
+			opacity: 0
+		&:hover::before, &:active::before, &:focus::before
+			width: 100%
+			opacity: 1
+
 	&__bottom-nav
 		@media all and ($m)
 			display: none
@@ -264,3 +291,38 @@
 		background-position: center
 		right: 0
 		top: 7px
+
+.catalog-drop
+	position: absolute
+	display: none
+	z-index: 999
+	padding-top: 20px
+	&__container
+		display: grid
+		grid-auto-flow: column
+		align-items: start
+
+		@media all and ($s)
+			display: none
+.tippy-box
+	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+	background: $white
+.tippy-content
+	padding: 0
+
+.catalog-navigation
+	display: grid
+	&__link
+		padding: 7px 15px
+		font-family: $font-family
+		font-weight: 500
+		font-size: 15px
+		line-height: 100%
+		color: $h1-6
+		text-decoration: none
+		cursor: pointer
+		transition: background $anim
+		&:active, &:focus, &:hover
+			background: #fdc694
+			
+			

@@ -119,9 +119,9 @@ $(document).ready(function () {
         slidesPerView: 2,
       },
       1015: {
-        slidesPerView: 2,
+        slidesPerView: 3,
       },
-   
+
     },
   });
 
@@ -368,88 +368,60 @@ $(document).ready(function () {
 
 
 
-  // /// кнопка подробнее
 
-  // if (document.querySelector('.player__btn-more')) {
+  const btnUp = {
+    el: document.querySelector('.btn-up'),
+    show() {
+      this.el.classList.remove('btn-up__hide');
+    },
+    hide() {
+      this.el.classList.add('btn-up__hide');
+    },
+    addEventListener() {
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        scrollY > 400 ? this.show() : this.hide();
+      });
+      document.querySelector('.btn-up').onclick = () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
 
-  //   let btnMore = document.querySelector('.player__btn-more')
-  //   let tbh = document.querySelector('.player__hidden')
-
-  //   btnMore.addEventListener('click', () => {
-  //     btnMore.classList.add('d-n')
-  //     tbh.classList.remove('d-n')
-  //   })
-
-
-  // }
-
-
-  // // const validation = new JustValidate('#pay-form', {
-  // //   validateBeforeSubmitting: true,
-  // //   focusInvalidField: true,
-  // //   lockForm: true,
-  // // });
-
-  // // validation
-  // //   .addField('#mail_input', [
-  // //     {
-  // //       rule: 'required',
-  // //       errorMessage: 'Введите адрес электронной почты',
-  // //     },
-  // //     {
-  // //       rule: 'email',
-  // //       errorMessage: 'Неправильно введен адрес электронной почты',
-  // //     },
-  // //   ])
+  btnUp.addEventListener();
 
 
 
-  // // модалки
-
-
-  // // 1
-  // let modalClose = document.getElementById('modalsClose')
-
-  // let btnOrderPrayer = document.getElementById('btnOrderPrayer')
-  // let orderPrayer = document.getElementById('orderPrayer')
-  // let modalBbackdrop = document.querySelector('.modal-backdrop')
-  // let bodyModal = document.querySelector('body')
-
-
-  // btnOrderPrayer.addEventListener('click', () => {
-  //   modalBbackdrop.classList.add('show')
-  //   orderPrayer.classList.add('show')
-  //   bodyModal.classList.add('modal')
-
-  // })
-
-  // modalClose.addEventListener('click', () => {
-  //   modalBbackdrop.classList.remove('show')
-  //   orderPrayer.classList.remove('show')
-  //   bodyModal.classList.remove('modal')
-  // })
-
-  // // 2
-
-  // let modalsCardLink = document.querySelectorAll('.card-modal')
-
-  // let modalCard = document.getElementById('modalCard')
-  // let modalCardClose = document.querySelector('.modals-kid__close')
-
-  // modalsCardLink.forEach(element => {
-  //   element.addEventListener('click', () => {
-  //     modalBbackdrop.classList.add('show')
-  //     modalCard.classList.add('show')
-  //   });
-  // })
-
-  // modalCardClose.addEventListener('click', () => {
-  //   modalBbackdrop.classList.remove('show')
-  //   modalCard.classList.remove('show')
-  // })
 
 
 
+  //menu
+
+  let catalogDropp = document.querySelectorAll('.header-bottom__item--drop')
+  console.log(catalogDropp)
+
+  catalogDropp.forEach(element => {
+    // element.addEventListener('click', () => {
+    tippy(element, {
+      content(reference) {
+        const id = reference.getAttribute('data-template');
+        const template = document.getElementById(id);
+        return template.innerHTML;
+      },
+      allowHTML: true,
+      placement: 'bottom-start',
+      arrow: false,
+      animation: 'fade',
+      trigger: 'click',
+      interactive: true
+    });
+    // })
+
+  });
 
 });
 

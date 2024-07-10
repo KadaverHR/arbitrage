@@ -7,7 +7,7 @@
   padding-left: 165px
   padding-right: 165px
   margin: 0 auto
-  min-width: 320px
+  min-width: 360px
   .border
     border-top: 1px solid #d6d6d6
     width: 100%
@@ -84,6 +84,8 @@ main
 
 .d-n
   display: none !important
+.d-block 
+  display: block !important
 
 input
   outline: none
@@ -108,12 +110,17 @@ input
       font-family: $second-family
       font-weight: 400
       font-size: 15px
-      @media all and ($l)
-        display: inline-block
-        text-overflow: ellipsis
-        overflow: hidden
-        width: 150px
-        white-space: nowrap
+      // @media all and ($l)
+      //   display: inline-block
+      //   text-overflow: ellipsis
+      //   overflow: hidden
+      //   width: 150px
+      //   white-space: nowrap
+      // @media all and ($s)
+      //   display: block
+      //   overflow: visible
+      //   width: 100%
+      //   text-overflow: inherit
 
   &__button
     position: absolute
@@ -249,3 +256,35 @@ body::-webkit-scrollbar-track
 body::-webkit-scrollbar-thumb
   background-color: #292d38
   border-radius: 3px
+
+.btn-up
+  position: fixed
+  left: 70px
+  bottom: 23px
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 50px
+  height: 50px
+  z-index: 10
+  @media all and ($l)
+    display: none
+  &__hide
+    display: none
+.btn-call
+  position: fixed
+  right: 70px
+  bottom: 23px
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 43px
+  height: 43px
+  z-index: 10
+  @media all and ($l)
+    right: 30px
+  @media all and ($s)
+    display: none
+  
