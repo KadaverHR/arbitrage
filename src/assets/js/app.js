@@ -136,7 +136,6 @@ $(document).ready(function () {
     experienceSwiper.classList.add('swiper-experience')
     experienceSwiper.classList.add('swiper')
     experienceGrid.classList.remove('experience__list')
-
   }
 
 

@@ -11,18 +11,28 @@
 		display: grid
 		justify-content: center
 		align-items: center
+		@media all and ($s)
+			min-height: 127px
 		.title
 			font-family: $second-family
 			font-weight: 700
 			font-size: 40px
 			line-height: 130%
 			color: $white
+			@media all and ($m)
+				font-size: 34px
+				line-height: 129%
+			@media all and ($s)
+				font-size: 30px
+				line-height: 147%
 	&__box
 		display: grid
 		grid-template-columns: repeat(3, auto)
 		gap: 10px
 		justify-content: space-between
 		padding-top: 50px
+		@media all and ($s)
+			grid-template-columns: 1fr
 	&__col
 		display: grid
 		gap: 15px

@@ -16,6 +16,8 @@
     grid-template-columns: repeat(3,1fr)
     gap: 30px
     padding-top: 40px
+    @media all and ($m)
+      grid-template-columns: repeat(2,1fr)
   &__item
     padding: 35px 20px
     display: grid
@@ -26,6 +28,8 @@
     justify-content: center
     justify-items: center
     align-items: center
+    @media all and ($s)
+      padding: 20px 10px
   &__item-text
     font-family: $second-family
     font-weight: 600
@@ -33,3 +37,6 @@
     line-height: 152%
     text-align: center
     color: $h1-6
+    @media all and ($s)
+      font-size: 13px
+      line-height: 138%
