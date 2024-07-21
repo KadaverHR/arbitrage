@@ -7,8 +7,8 @@
 		grid-template-columns: repeat(3, auto)
 		gap: 20px
 		justify-content: space-between
-		align-items: start
 		padding-bottom: 30px
+		align-items: stretch
 		@media all and ($s)
 			display: none
 	&__box-mob
@@ -46,6 +46,10 @@
 		&.big
 			font-size: 15px
 			font-family: $font-family
+
+	&__left
+		display: grid
+		align-content: space-between
 	&__center
 		display: grid
 		gap: 15px
@@ -56,6 +60,10 @@
 		line-height: 120%
 		color: $white
 		text-decoration: none
+		&:active, &:focus, &:hover
+			text-decoration: underline
+			
+			
 	&__contact-box
 		display: grid
 		gap: 15px

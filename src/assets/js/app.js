@@ -69,10 +69,10 @@ $(document).ready(function () {
   new Swiper(".swiper-staff", {
 
 
-    // navigation: {
-    //   nextEl: ".swiper-staff__swiper-button-next",
-    //   prevEl: ".swiper-staff__swiper-button-prev",
-    // },
+    navigation: {
+      nextEl: ".swiper-staff__swiper-button-next",
+      prevEl: ".swiper-staff__swiper-button-prev",
+    },
     pagination: {
       el: '.swiper-staff__swiper-pagination',
       clickable: true
@@ -103,6 +103,10 @@ $(document).ready(function () {
 
 
   new Swiper(".swiper-case", {
+    navigation: {
+      nextEl: ".swiper-case__swiper-button-next",
+      prevEl: ".swiper-case__swiper-button-prev",
+    },
     pagination: {
       el: '.swiper-case__swiper-pagination',
       clickable: true
@@ -164,12 +168,10 @@ $(document).ready(function () {
 
 
   new Swiper(".swiper-articles", {
-
-
-    // navigation: {
-    //   nextEl: ".swiper-staff__swiper-button-next",
-    //   prevEl: ".swiper-staff__swiper-button-prev",
-    // },
+    navigation: {
+      nextEl: ".swiper-articles__swiper-button-next",
+      prevEl: ".swiper-articles__swiper-button-prev",
+    },
     pagination: {
       el: '.swiper-articles__swiper-pagination',
       clickable: true
@@ -200,10 +202,10 @@ $(document).ready(function () {
   new Swiper(".swiper-reviews", {
 
 
-    // navigation: {
-    //   nextEl: ".swiper-staff__swiper-button-next",
-    //   prevEl: ".swiper-staff__swiper-button-prev",
-    // },
+    navigation: {
+      nextEl: ".swiper-reviews__swiper-button-next",
+      prevEl: ".swiper-reviews__swiper-button-prev",
+    },
     pagination: {
       el: '.swiper-reviews__swiper-pagination',
       clickable: true
@@ -266,10 +268,10 @@ $(document).ready(function () {
   new Swiper(".swiper-partners", {
 
 
-    // navigation: {
-    //   nextEl: ".swiper-staff__swiper-button-next",
-    //   prevEl: ".swiper-staff__swiper-button-prev",
-    // },
+    navigation: {
+      nextEl: ".swiper-partners__swiper-button-next",
+      prevEl: ".swiper-partners__swiper-button-prev",
+    },
     pagination: {
       el: '.swiper-partners__swiper-pagination',
       clickable: true
@@ -401,7 +403,6 @@ $(document).ready(function () {
   //menu
 
   let catalogDropp = document.querySelectorAll('.header-bottom__item--drop')
-  console.log(catalogDropp)
 
   catalogDropp.forEach(element => {
     // element.addEventListener('click', () => {
@@ -415,13 +416,88 @@ $(document).ready(function () {
       placement: 'bottom-start',
       arrow: false,
       animation: 'fade',
-      trigger: 'click',
+      trigger: 'mouseenter focus',
       interactive: true
     });
     // })
 
   });
 
+
+
+
+  $('.input-phone').mask('+7 (999) 999-99-99');
+
+
+
+
+  // форма
+
+  let formCallTop = document.querySelector('.header-call')
+  let formCallFooter = document.querySelector('.footer-call')
+
+  const headerCall = document.getElementById('headerCall');
+
+  // document.querySelector('.connect__form-close').addEventListener('click', () => {
+  //   preventDefault()
+  // })
+
+
+  tippy(formCallTop, {
+    content: headerCall.innerHTML,
+    allowHTML: true,
+    placement: 'bottom-end',
+    arrow: false,
+    animation: 'fade',
+    trigger: 'click',
+    interactive: true,
+
+    onShow(instance) {
+      instance.popper.querySelector('.connect__form-close').addEventListener('click', () => {
+        instance.hide();
+      });
+    },
+    onHide(instance) {
+      instance.popper.querySelector('.connect__form-close').removeEventListener('click', () => {
+        instance.hide();
+      });
+    },
+  });
+
+
+
+
+  tippy(formCallFooter, {
+    content: headerCall.innerHTML,
+    allowHTML: true,
+    placement: 'top-end',
+    arrow: false,
+    animation: 'fade',
+    trigger: 'click',
+    interactive: true,
+    onShow(instance) {
+      instance.popper.querySelector('.connect__form-close').addEventListener('click', () => {
+        instance.hide();
+      });
+    },
+    onHide(instance) {
+      instance.popper.querySelector('.connect__form-close').removeEventListener('click', () => {
+        instance.hide();
+      });
+    },
+  });
+
+
+
+
+
+  formCallTop.addEventListener('click', () => {
+    $('.input-phone').mask('+7 (999) 999-99-99');
+  })
+
+  formCallFooter.addEventListener('click', () => {
+    $('.input-phone').mask('+7 (999) 999-99-99');
+  })
 });
 
 

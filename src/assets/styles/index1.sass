@@ -257,6 +257,9 @@
 
 .staff
   display: flex
+  // .swiper-button-next, .swiper-button-prev
+  //   top: 50%
+  //   transform: translateY(-50%)
   &__title
     @media all and ($m)
       display: flex
@@ -314,6 +317,9 @@
     height: 3px
     border-radius: 0
     background: #6d6f7c
+  .swiper-button-next, .swiper-button-prev
+    top: 50%
+    transform: translateY(-50%)
   &__card
     display: grid
     grid-template-columns: 1fr
@@ -364,13 +370,16 @@
     font-size: 15px
     color: $white
   &__card-btn
+    display: grid
+    justify-self: start
+    justify-items: start
+    justify-content: start
     border-radius: 50px
-    padding: 10px 30px
+    padding: 6px 20px
     background: $button
     font-family: $font-family
     font-weight: 700
     font-size: 14px
-    line-height: 114%
     text-align: center
     color: $h1-6
     text-decoration: none
@@ -602,8 +611,9 @@
     font-family: $second-family
     font-weight: 600
     font-size: 21px
-    line-height: 152%
+    line-height: 110%
     color: $h1-6
+    text-decoration: none
   &__desc
     font-family: $font-family
     font-weight: 400
@@ -723,6 +733,16 @@
     font-size: 24px
     color: $h1-6
     line-height: 28px
+  &__form-text
+    font-family: $font-family
+    font-weight: 400
+    font-size: 15px
+    line-height: 120%
+    color: $body-text
+  &__form-close
+    position: absolute
+    right: 20px
+    top: 20px
   &__form-box
     display: grid
     gap: 20px
@@ -773,3 +793,13 @@
         background-position: center center
         background-size: 50% 50%
         transition: border $anim
+
+.price
+  border: 1px solid #D7D7D7
+  border-radius: 5px
+  margin-top: 20px
+  .accordion__title-box
+    &::before
+      display: none
+  .accordion__title
+    padding-left: 0

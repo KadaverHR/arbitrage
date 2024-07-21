@@ -18,6 +18,7 @@
   <script defer src="assets/libs/just-validate.production.min.js"></script>
   <script defer src="assets/libs/accordion.js"></script>
   <script defer src="assets/libs/aos.js"></script>
+  <script defer src="assets/libs/jquery.maskedinput.min.js"></script>
   <script defer src="assets/libs/swiper.js"></script>
   <script defer src="assets/libs/slick.min.js"></script>
   <script defer src="assets/libs/tippy-bundle.umd.js"></script>
@@ -41,14 +42,49 @@
 
 
   <div class="btn-up btn-up__hide">
-    <img src="../../assets/img/btn-top.svg" alt="">
+    <img src="assets/img/btn-top.svg" alt="">
   </div>
 
 
-  <a href="" class="btn-call">
-    <img src="../../assets/img/btn-call.svg" alt="">
-  </a>
+  <button class="btn-call footer-call">
+    <img src="assets/img/btn-call.svg" alt="">
+  </button>
 
+
+
+
+
+
+  <div style="display: none;" id="headerCall">
+
+    <form class="connect__form" action="">
+
+      <p class="connect__form-title">
+        Записаться
+        на консультацию
+      </p>
+      <a style="cursor: pointer;" class="connect__form-close">
+        <img src="assets/img/closeform.svg" alt="">
+      </a>
+      <p class="connect__form-text">
+        Оставьте контактные данные и менеджер перезвонит Вам в ближайшее время.
+      </p>
+      <div class="connect__form-box">
+
+        <input class="input-form connect__form-input name" type="text" placeholder="Имя">
+
+        <input class="input-form connect__form-input tel input-phone" type="text" placeholder="Телефон">
+
+
+        <div class="connect__form-check">
+          <input type="checkbox" class="custom-checkbox" id="connect__check" name="happy" value="yes">
+          <label for="connect__check">Согласие на обработку персональных данных</label>
+        </div>
+        <button class="connect__form-btn btn" type="submit"> Бесплатная консультация</button>
+      </div>
+    </form>
+
+  </div>
 
   <!--<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
 

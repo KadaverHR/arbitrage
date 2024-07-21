@@ -21,13 +21,26 @@
   @media all and ($s)
     padding-left: 16px
     padding-right: 16px
-
   &--swiper
-    max-width: 1520px
-    padding-left: 125px
-    padding-right: 125px
+    max-width: 1480px
     display: flex
     margin: 0 auto
+    position: relative
+    @media all and ($l)
+      max-width: 991px
+      padding-left: 31px
+      padding-right: 31px
+    @media all and ($m)
+      padding-left: 39px
+      padding-right: 39px
+    @media all and ($s)
+      padding-left: 16px
+      padding-right: 16px
+    .swiper-wrapper
+      max-width: 1100px
+      margin-left: auto
+      margin-right: auto
+      position: relative
 
 body
   line-height: 1.2
@@ -84,7 +97,7 @@ main
 
 .d-n
   display: none !important
-.d-block 
+.d-block
   display: block !important
 
 input
@@ -98,7 +111,6 @@ input
   background: #82807e
   width: 100%
   &__input
-
     background: #82807e
     width: calc(100% - 30px)
     color: $white
@@ -193,6 +205,9 @@ input
     text-align: center
     color: $h1-6
     text-decoration: none
+    &:active, &:hover, &:focus
+      background: $btn-active
+      transition: $anim
 
 .custom-checkbox
   position: absolute
@@ -283,8 +298,32 @@ body::-webkit-scrollbar-thumb
   width: 43px
   height: 43px
   z-index: 10
+  transition: transform $anim
+  &:hover
+    transform: scale(1.05)
   @media all and ($l)
     right: 30px
   @media all and ($s)
     display: none
-  
+
+.swiper-button-next
+  top: 167px
+  right: 125px
+  &::after
+    transform: rotate(180deg)
+    content: ""
+    background: url(/assets/img/sw-arrow.svg)
+    width: 20px
+    height: 60px
+  @media all and ($l)
+    display: none
+.swiper-button-prev
+  top: 167px
+  left: 125px
+  &::after
+    content: ""
+    background: url(/assets/img/sw-arrow.svg)
+    width: 20px
+    height: 60px
+  @media all and ($l)
+    display: none

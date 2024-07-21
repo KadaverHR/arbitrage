@@ -70,12 +70,19 @@
 		text-decoration: none
 		justify-items: start
 		justify-content: start
+		&:active .header-top__contact-text, &:focus .header-top__contact-text, &:hover .header-top__contact-text
+			color: $btn-active
+
+		&.text
+			&:active .header-top__contact-text, &:focus .header-top__contact-text, &:hover .header-top__contact-text
+				color: $white
 	&__contact-text
 		font-family: $second-family
 		font-weight: 400
 		font-size: 15px
 		color: $white
 		white-space: nowrap
+		transition: color $anim
 		span
 			font-weight: 700
 	&__soc-box
@@ -89,12 +96,23 @@
 		grid-auto-flow: column
 		gap: 15px
 		align-items: center
+	&__soc-link
+		svg path
+			transition: fill $anim
+		&:active svg path, &:focus svg path, &:hover svg path
+			fill: $btn-active
+
 	&__lk-link
 		display: grid
 		grid-auto-flow: column
 		gap: 10px
 		align-items: center
 		text-decoration: none
+		svg path
+			transition: fill $anim
+	&__lk-link
+		&:active svg path, &:focus svg path, &:hover svg path
+			fill: $white
 	&__btn-box
 		width: 100%
 		display: grid
@@ -107,6 +125,9 @@
 		font-size: 13px
 		text-align: center
 		color: $white
+		&:active, &:focus, &:hover
+			background: $btn-active
+			transition: background $anim
 
 .header-bottom
 	display: grid
@@ -149,7 +170,7 @@
 		&::before
 			content: ""
 			position: absolute
-			bottom: -3px
+			top: -5px
 			width: 0
 			height: 4px
 			left: 50%
@@ -324,5 +345,3 @@
 		transition: background $anim
 		&:active, &:focus, &:hover
 			background: #fdc694
-			
-			
