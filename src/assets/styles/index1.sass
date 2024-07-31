@@ -1,9 +1,17 @@
 .experience
   display: flex
+  padding-top: 40px
+  &.desc
+    display: grid
+    @media all and ($l)
+      display: none
+  &.mob
+    display: none
+    @media all and ($l)
+      display: flex
   .swiper-trigger
     padding-top: 40px
   .swiper-experience
-
     padding-bottom: 40px
   .swiper-pagination-bullet
     width: 30px
@@ -58,7 +66,8 @@
     gap: 30px
     justify-content: space-between
     @media all and ($l)
-      display: flex
+
+      display: none
       gap: auto
       justify-content: auto
 .trust

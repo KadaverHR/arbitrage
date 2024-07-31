@@ -28,6 +28,11 @@
     justify-content: center
     justify-items: center
     align-items: center
+    text-decoration: none
+
+    &:active .services-page__item-text, &:focus .services-page__item-text, &:hover .services-page__item-text
+      color: $btn-active
+
     @media all and ($s)
       padding: 20px 10px
   &__item-text
@@ -37,6 +42,7 @@
     line-height: 152%
     text-align: center
     color: $h1-6
+    transition: color $anim
     @media all and ($s)
       font-size: 13px
       line-height: 138%

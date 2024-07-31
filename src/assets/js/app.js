@@ -132,15 +132,15 @@ $(document).ready(function () {
 
 
 
-  let widthWindow = window.innerWidth
-  let experienceSwiper = document.querySelector('.swiper-trigger')
-  let experienceGrid = document.querySelector('.experience__list')
-  console.log(widthWindow);
-  if (widthWindow < 1439.9) {
-    experienceSwiper.classList.add('swiper-experience')
-    experienceSwiper.classList.add('swiper')
-    experienceGrid.classList.remove('experience__list')
-  }
+  // let widthWindow = window.innerWidth
+  // let experienceSwiper = document.querySelector('.swiper-trigger')
+  // let experienceGrid = document.querySelector('.experience__list')
+  // console.log(widthWindow);
+  // if (widthWindow < 1439.9) {
+  //   experienceSwiper.classList.add('swiper-experience')
+  //   experienceSwiper.classList.add('swiper')
+  //   experienceGrid.classList.remove('experience__list')
+  // }
 
 
   new Swiper(".swiper-experience", {
