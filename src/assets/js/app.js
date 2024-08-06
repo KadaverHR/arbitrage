@@ -235,10 +235,10 @@ $(document).ready(function () {
   new Swiper(".swiper-certificates", {
 
 
-    // navigation: {
-    //   nextEl: ".swiper-staff__swiper-button-next",
-    //   prevEl: ".swiper-staff__swiper-button-prev",
-    // },
+    navigation: {
+      nextEl: ".swiper-certificates__swiper-button-next",
+      prevEl: ".swiper-certificates__swiper-button-prev",
+    },
     pagination: {
       el: '.swiper-certificates__swiper-pagination',
       clickable: true

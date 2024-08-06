@@ -8,6 +8,10 @@
     max-width: 350px
     max-height: 248px
     object-fit: cover
+    @media all and ($s)
+      margin: 0
+      width: 100%
+      max-width: 100%
   &__text
     margin-bottom: 10px
     font-family: $font-family
@@ -29,6 +33,8 @@
     justify-content: space-between
     padding-top: 60px
     padding-bottom: 40px
+    @media all and ($s)
+      grid-template-columns: 1fr
   &__item
     display: grid
     justify-items: center
@@ -60,11 +66,20 @@
     color: $h1-6
   &__text-box
     padding-top: 20px
+    @media all and ($s)
+      display: grid
+      gap: 30px
   &__tab-box
     background: $white
     margin-top: 40px
     padding: 6px 20px 20px 20px
     border-radius: 5px
+
+  &__btn-text
+    @media all and ($s)
+      padding-bottom: 15px
+      padding-top: 15px
+      transform: rotate(-45deg)
   &__btn-box
     display: grid
     grid-auto-flow: column
@@ -72,6 +87,8 @@
     gap: 10px
     padding-bottom: 10px
     border-bottom: 1px solid #d6d6d6
+    @media all and ($s)
+      gap: 5px
     .tab-btn
       font-family: $second-family
       font-weight: 600
@@ -108,6 +125,9 @@
 
 .certificates
   display: flex
+  .swiper-button-next, .swiper-button-prev
+    top: 50%
+    transform: translateY(-50%)
   .swiper-certificates
     padding-top: 40px
     padding-bottom: 40px
@@ -119,9 +139,14 @@
   &__card
     box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.15)
     border-radius: 5px
+    display: grid
+    justify-content: center
+    justify-items: center
 
 .partners
   display: flex
+  .swiper-button-next, .swiper-button-prev
+    top: 89px
   .swiper-partners
     padding-top: 40px
     padding-bottom: 40px
