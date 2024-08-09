@@ -3,6 +3,14 @@
   padding-bottom: 60px
   .title-wrapper
     padding-top: 40px
+  .new-page__img-box
+    height: 201px
+    @media all and ($s)
+      height: 117px
+    img
+      object-fit: cover
+      height: 100%
+      border-radius: 5px
   &__author-box
     margin-top: 20px
     margin-bottom: 30px
@@ -16,6 +24,7 @@
     @media all and ($s)
       grid-template-columns: repeat(3,auto)
       gap: 20px
+      margin-bottom: 20px
   &__author-photo
     border-radius: 50%
     padding: 4px
@@ -145,6 +154,9 @@
     gap: 20px
     align-items: center
     justify-self: end
+    @media all and ($s)
+      width: 100%
+      justify-content: space-between
   &__social-links
     display: grid
     grid-auto-flow: column
@@ -156,6 +168,11 @@
     font-size: 18px
     line-height: 144%
     color: #333643
+  &__social-link-img
+    path
+      transition: fill $anim
+    &:active path, &:hover path, &:focus path
+      fill: $btn-active
 
 .is-price-page
   .services-page__text-box
