@@ -129,7 +129,32 @@ $(document).ready(function () {
     },
   });
 
+  new Swiper(".swiper-reviews-video", {
+    navigation: {
+      nextEl: ".swiper-reviews-video__swiper-button-next",
+      prevEl: ".swiper-reviews-video__swiper-button-prev",
+    },
+    pagination: {
+      el: '.swiper-reviews-video__swiper-pagination',
+      clickable: true
+    },
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1015: {
+        slidesPerView: 3,
+      },
 
+    },
+  });
 
 
   // let widthWindow = window.innerWidth
@@ -502,5 +527,23 @@ $(document).ready(function () {
 
 
 
+///плеер
+
+let videoBox = document.querySelectorAll('.reviews-video__video-box')
+
+videoBox.forEach(elem => {
+  let videoElem = elem.querySelector('.reviews-video__video')
+  dataVideo = videoElem.getAttribute('data-video')
+  dataImg = videoElem.getAttribute('data-image')
+  dataId = videoElem.getAttribute('id')
+
+
+  new Playerjs({
+    id: dataId,
+    file: dataVideo,
+    poster: dataImg,
+  })
+
+});
 
 

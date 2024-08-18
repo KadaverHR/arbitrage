@@ -1,0 +1,66 @@
+.reviews-page
+  &__list
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    gap: 30px
+    margin-top: 40px
+    margin-bottom: 40px
+    @media all and ($m)
+      grid-template-columns: repeat(2,1fr)
+    @media all and ($s)
+      grid-template-columns: repeat(1,1fr)
+  &__subtitle
+    font-family: $second-family
+    font-weight: 600
+    font-size: 31px
+    line-height: 142%
+    color: #292d38
+    margin-block-start: 0
+    margin-block-end: 0
+    margin-bottom: 20px
+  &__text
+    font-family: $font-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 144%
+    color: $body-text
+  &__site-card
+    border: 1px solid #d7d7d7
+    border-radius: 5px
+    display: grid
+    padding: 14px 10px
+    grid-template-columns: repeat(3,1fr)
+    text-decoration: none
+  &__site-text
+    font-family: $font-family
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
+    color: $body-text
+  &__site-list
+    margin-top: 40px
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    gap: 10px 30px
+
+.reviews-video
+  margin-top: 40px
+  .swiper-reviews-video
+    padding-top: 40px
+    padding-bottom: 40px
+  .swiper-pagination-bullet
+    width: 30px
+    height: 3px
+    border-radius: 0
+    background: #6d6f7c
+  &__video
+    max-width: 350px
+    max-height: 235px
+  &__video-title
+    font-family: $second-family
+    font-weight: 600
+    font-size: 21px
+    line-height: 152%
+    color: #1a1a1e
+  &__video-desc-box
+    margin-top: 20px
