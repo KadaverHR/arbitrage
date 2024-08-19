@@ -144,7 +144,7 @@ $(document).ready(function () {
         slidesPerView: 1,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
