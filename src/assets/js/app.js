@@ -523,27 +523,64 @@ $(document).ready(function () {
   formCallFooter.addEventListener('click', () => {
     $('.input-phone').mask('+7 (999) 999-99-99');
   })
-});
 
 
 
-///плеер
 
-let videoBox = document.querySelectorAll('.reviews-video__video-box')
+  ///плеер
 
-videoBox.forEach(elem => {
-  let videoElem = elem.querySelector('.reviews-video__video')
-  dataVideo = videoElem.getAttribute('data-video')
-  dataImg = videoElem.getAttribute('data-image')
-  dataId = videoElem.getAttribute('id')
+  let videoBox = document.querySelectorAll('.reviews-video__video-box')
+
+  videoBox.forEach(elem => {
+    let videoElem = elem.querySelector('.reviews-video__video')
+    dataVideo = videoElem.getAttribute('data-video')
+    dataImg = videoElem.getAttribute('data-image')
+    dataId = videoElem.getAttribute('id')
 
 
-  new Playerjs({
-    id: dataId,
-    file: dataVideo,
-    poster: dataImg,
+    new Playerjs({
+      id: dataId,
+      file: dataVideo,
+      poster: dataImg,
+    })
+
+
+  });
+
+
+
+  /// select
+
+  let selectStaff = document.querySelector('.staffs-page__filter-select')
+  let selectList = document.querySelector('.staffs-page__filter-select-drop')
+  let selectItems = document.querySelectorAll('.staffs-page__filter-select-text')
+
+  selectStaff.addEventListener('click', () => {
+    selectStaff.classList.toggle('active')
+    selectList.classList.toggle('drop')
+
+    selectItems.forEach(element => {
+      element.addEventListener('click', () => {
+        let selectItemsText = element.innerHTML
+        let selectItemsValue = element.value
+        selectStaff.querySelector('.staffs-page__filter-select-value').innerHTML = selectItemsText
+        selectStaff.value = selectItemsValue
+        selectStaff.classList.remove('active')
+        selectList.classList.remove('drop')
+      })
+    });
+
+
   })
 
+
+
+
+
+
 });
+
+
+
 
 

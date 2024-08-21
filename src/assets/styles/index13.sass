@@ -1,0 +1,82 @@
+.staffs-page
+  &__select
+    position: relative
+    max-width: 274px
+  &__filter-block
+    display: grid
+    gap: 5px
+  &__filter-box
+    display: grid
+    gap: 20px
+    grid-template-columns: 274px 1fr
+    margin-top: 15px
+    padding-bottom: 30px
+    border-bottom: 1px solid #c2c2c2
+  &__filter-select
+    width: 100%
+    display: grid
+    grid-auto-flow: column
+    gap: 5px
+    align-items: center
+    border-radius: 5px
+    background: $white
+    border: 1px solid #c2c2c2
+    padding: 6px 10px
+    justify-content: space-between
+    &.active
+      & .staffs-page__filter-select-arrow
+        transform: rotate(-180deg)
+  &__filter-select-arrow
+    transition: transform $anim
+  &__filter-select-drop
+    top: 38px
+    width: 100%
+    position: absolute
+    display: grid
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+    background: $white
+    display: none
+    transition: display $anim
+    &.drop
+      display: block
+  &__filter-select-text
+    padding: 8px 10px
+    font-family: $font-family
+    font-weight: 500
+    font-size: 15px
+    line-height: 100%
+    color: $h1-6
+    cursor: pointer
+    transition: background $anim
+    &:active, &:hover, &:focus
+      background: #fdc694
+
+  &__filter-count
+    display: grid
+    gap: 5px
+  &__filter-radio
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    gap: 20px
+    justify-content: space-between
+  &__filter-radiobtn input[type=radio]
+    display: none
+  &__filter-radio-text
+    display: grid
+    font-family: $second-family
+    font-weight: 600
+    font-size: 15px
+    text-transform: lowercase
+    text-align: center
+    color: #333643
+    border-radius: 50px
+    background: #fff
+    border: 1px solid #a8a8a8
+    padding: 6px 20px
+    cursor: pointer
+    
+  &__filter-radiobtn input[type=radio]:checked + .staffs-page__filter-radio-text
+    background: #9b9b9b
+    border: 1px solid #9b9b9b
+    font-weight: 700
+    color: $white

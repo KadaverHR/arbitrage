@@ -1,0 +1,87 @@
+{% set title = "Арбитражные управляющие" %}
+{% set bodyClass = "is-staffs-page" %}
+
+{% extends "html/layouts/default.html" %}
+
+{% block content %}
+
+
+<section class="staffs-page gray section">
+  <div class="container">
+    {% include "html/includes/breadcrumbs.html" %}
+    <h1 class="title">
+      <span class="title-bg">Арбитражные управляющие </span>
+    </h1>
+
+    <div class="staffs-page__filter-box">
+      <div class="staffs-page__filter-block">
+
+        <p class="staffs-page__filter-label">
+          Выбор региона
+        </p>
+
+
+        <div class="staffs-page__select">
+          <button data-value="All" class="staffs-page__filter-select">
+            <p class="staffs-page__filter-select-value">Все</p>
+            <img class="staffs-page__filter-select-arrow" src="assets/img/select-arrow.svg">
+          </button>
+
+          <div class="staffs-page__filter-select-drop">
+            <p data-value="orel" class="staffs-page__filter-select-text">
+              Все
+            </p>
+            <p data-value="orel" class="staffs-page__filter-select-text">
+              Орел
+            </p>
+            <p data-value="msk" class="staffs-page__filter-select-text">
+              Москва
+            </p>
+            <p data-value="spb" class="staffs-page__filter-select-text">
+              СПБ
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="staffs-page__filter-count">
+        <p class="staffs-page__filter-label">
+          Количество завершенных дел
+        </p>
+
+        <div class="staffs-page__filter-radio">
+          <div class="staffs-page__filter-radiobtn">
+            <input id="radio-1" type="radio" name="radio" value="1" checked>
+            <label class="staffs-page__filter-radio-text" for="radio-1">До 50</label>
+          </div>
+
+          <div class="staffs-page__filter-radiobtn">
+            <input id="radio-2" type="radio" name="radio" value="2">
+            <label class="staffs-page__filter-radio-text" for="radio-2">50 - 100</label>
+          </div>
+
+          <div class="staffs-page__filter-radiobtn">
+            <input id="radio-3" type="radio" name="radio" value="3">
+            <label class="staffs-page__filter-radio-text" for="radio-3">100 - 200</label>
+          </div>
+          <div class="staffs-page__filter-radiobtn">
+            <input id="radio-4" type="radio" name="radio" value="4">
+            <label class="staffs-page__filter-radio-text" for="radio-4">более 200</label>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+
+
+
+
+{% endblock %}
