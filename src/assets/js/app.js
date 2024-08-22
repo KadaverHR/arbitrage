@@ -555,23 +555,37 @@ $(document).ready(function () {
   let selectList = document.querySelector('.staffs-page__filter-select-drop')
   let selectItems = document.querySelectorAll('.staffs-page__filter-select-text')
 
-  selectStaff.addEventListener('click', () => {
-    selectStaff.classList.toggle('active')
-    selectList.classList.toggle('drop')
+  if (selectStaff) {
+    selectStaff.addEventListener('click', () => {
+      selectStaff.classList.toggle('active')
+      selectList.classList.toggle('drop')
 
-    selectItems.forEach(element => {
-      element.addEventListener('click', () => {
-        let selectItemsText = element.innerHTML
-        let selectItemsValue = element.value
-        selectStaff.querySelector('.staffs-page__filter-select-value').innerHTML = selectItemsText
-        selectStaff.value = selectItemsValue
-        selectStaff.classList.remove('active')
-        selectList.classList.remove('drop')
-      })
-    });
+      selectItems.forEach(element => {
+        element.addEventListener('click', () => {
+          let selectItemsText = element.innerHTML
+          let selectItemsValue = element.value
+          selectStaff.querySelector('.staffs-page__filter-select-value').innerHTML = selectItemsText
+          selectStaff.value = selectItemsValue
+          selectStaff.classList.remove('active')
+          selectList.classList.remove('drop')
+        })
+      });
+    })
+  }
+  /// еще 20 регионов
+
+  let regions = document.querySelector('.pers-page__region-other')
+  let btnRegions = document.querySelector('.pers-page__region-link')
+  console.log(btnRegions);
+  if (btnRegions) {
+    btnRegions.addEventListener('click', () => {
+      regions.classList.remove('d-n')
+      btnRegions.classList.add('d-n')
+
+    })
+  }
 
 
-  })
 
 
 

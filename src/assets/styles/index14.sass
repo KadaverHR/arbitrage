@@ -26,9 +26,74 @@
     color: $body-text
   &__body
     display: grid
-    grid-template-columns: 1fr 1fr auto
+    grid-template-columns: repeat(3, auto)
     padding-top: 20px
     padding-bottom: 30px
     border-bottom: 1px solid #c2c2c2
+    align-items: start
+    gap: 30px
   &__img
     border-radius: 5px
+    max-width: 300px
+    object-fit: cover
+  &__desc-title
+    font-family: $font-family
+    font-weight: 600
+    font-size: 13px
+    line-height: 138%
+    text-transform: uppercase
+    color: $text
+  &__desc-text
+    font-family: $font-family
+    font-weight: 600
+    font-size: 13px
+    line-height: 138%
+    text-transform: uppercase
+    color: #333643
+    &.pers-price
+      font-family: $font-family
+      font-weight: 700
+      font-size: 15px
+      line-height: 120%
+      text-transform: none
+      color: #333643
+      span
+        color: #f47500
+  &__desc
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 30px
+  &__desc-box
+    display: grid
+    gap: 10px
+  &__region-link
+    text-decoration: underline
+    text-decoration-skip-ink: none
+    color: #5188bb
+    cursor: pointer
+    transition: color $anim
+    &:active, &:hover, &:focus
+      color: $btn-active
+  &__icons-box
+    display: grid
+    grid-template-columns: 1fr 1fr
+    margin-top: 30px
+  &__icons-block
+    display: grid
+    justify-items: center
+    justify-content: space-between
+  &__icons-count
+    font-family: $second-family
+    font-weight: 600
+    font-size: 50px
+    line-height: 54%
+    color: #5188bb
+    margin-top: 20px
+    margin-bottom: 10px
+  &__icons-count-title
+    font-family: $font-family
+    font-weight: 600
+    font-size: 15px
+    line-height: 160%
+    text-transform: uppercase
+    color: $body-text
