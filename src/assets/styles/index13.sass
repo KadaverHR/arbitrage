@@ -2,9 +2,17 @@
   &__select
     position: relative
     max-width: 274px
+    @media all and ($s)
+      max-width: none
   &__filter-block
     display: grid
     gap: 5px
+
+  &__filter-label
+    font-family: $font-family
+    font-weight: 600
+    font-size: 15px
+    color: #333643
   &__filter-box
     display: grid
     gap: 20px
@@ -12,6 +20,10 @@
     margin-top: 15px
     padding-bottom: 30px
     border-bottom: 1px solid #c2c2c2
+    @media all and ($l)
+      grid-template-columns: 200px 1fr
+    @media all and ($s)
+      grid-template-columns: 1fr
   &__filter-select
     width: 100%
     display: grid
@@ -51,6 +63,12 @@
     &:active, &:hover, &:focus
       background: #fdc694
 
+  &__filter-radiobtn
+    @media all and ($s)
+      display: flex
+      min-width: 102px
+      max-width: 150px
+      width: 100%
   &__filter-count
     display: grid
     gap: 5px
@@ -59,6 +77,12 @@
     grid-template-columns: repeat(4,1fr)
     gap: 20px
     justify-content: space-between
+    @media all and ($l)
+      gap: 15px
+    @media all and ($s)
+      display: flex
+      flex-wrap: wrap
+      justify-content: start
   &__filter-radiobtn input[type=radio]
     display: none
   &__filter-radio-text
@@ -74,9 +98,116 @@
     border: 1px solid #a8a8a8
     padding: 6px 20px
     cursor: pointer
-    
+    white-space: nowrap
+    @media all and ($m)
+      padding: 6px 10px
+    @media all and ($s)
+      width: 100%
+
   &__filter-radiobtn input[type=radio]:checked + .staffs-page__filter-radio-text
     background: #9b9b9b
     border: 1px solid #9b9b9b
     font-weight: 700
     color: $white
+  &__list
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    gap: 30px
+    margin-bottom: 40px
+    @media all and ($m)
+      grid-template-columns: repeat(2, 1fr)
+    @media all and ($s)
+      grid-template-columns: 1fr
+  &__cadr
+    margin-top: 45px
+    padding: 30px 20px
+    border-radius: 10px
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.17)
+    background: $white
+    position: relative
+    transition: box-shadow $anim
+    &:hover, &:active, &:focus
+      box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.25)
+    &::before
+      content: ""
+      position: absolute
+      z-index: 5
+      top: -21px
+      left: 50%
+      transform: translateX(-50%)
+      width: 95px
+      height: 22px
+      background: #fff
+      clip-path: path('M0.166016 22C11.7202 8.53125 28.8638 0 48 0C66.6812 0 83.4629 8.13281 95 21.0469V22H0.166016Z')
+  &__cadr-header-img
+    border-radius: 100%
+    width: 115px
+    height: 115px
+    object-fit: cover
+    position: relative
+    top: -48px
+    z-index: 10
+  &__cadr-header-text
+    font-family: $second-family
+    font-weight: 600
+    font-size: 15px
+    text-transform: uppercase
+    color: #333643
+  &__cadr-header-rating
+    display: grid
+    grid-auto-flow: column
+    gap: 10px
+    justify-content: end
+  &__cadr-header
+    display: grid
+    grid-auto-flow: column
+    grid-template-columns: 1fr auto 1fr
+    margin-top: 4px
+    gap: 5px
+  &__cadr-body
+    display: grid
+    justify-content: center
+    justify-items: center
+  &__cadr-name
+    font-family: $second-family
+    font-weight: 600
+    font-size: 21px
+    line-height: 152%
+    color: $h1-6
+    margin-bottom: 8px
+  &__cadr-desc-box
+    display: grid
+    gap: 5px
+    justify-content: center
+    justify-items: center
+    margin-bottom: 15px
+  &__cadr-desc-block
+    display: grid
+    gap: 5px
+    grid-auto-flow: column
+    align-items: center
+  &__cadr-desc-text
+    font-family: $font-family
+    font-weight: 700
+    font-size: 15px
+    line-height: 160%
+    color: $text
+    span
+      color: #f47500
+  &__cadr-desc-btn
+    border-radius: 50px
+    background: #fff
+    border: 2px solid $btn-active
+    font-family: $font-family
+    font-weight: 700
+    font-size: 14px
+    line-height: 114%
+    text-align: center
+    color: $h1-6
+    padding: 9px 60px
+    text-decoration: none
+    display: grid
+    align-items: center
+    transition: background $anim
+    &:hover, &:active, &:focus
+      background: $btn-active

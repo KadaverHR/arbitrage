@@ -1,0 +1,83 @@
+{% set title = "Арбитражные управляющие" %}
+{% set bodyClass = "is-pers-page" %}
+
+{% extends "html/layouts/default.html" %}
+
+{% block content %}
+
+
+<section class="pers-page white section">
+  <div class="container">
+    {% include "html/includes/breadcrumbs.html" %}
+    <div class="pers-page__title-box">
+      <h1 class="title">
+        <span class="title-bg">Андреев Алексей </span>Михайлович
+      </h1>
+      <p class="pers-page__title-subtitle">
+        Арбитражный управляющий
+      </p>
+    </div>
+
+    <div class="pers-page__body">
+      <img class="pers-page__img" src="assets/img/staff3.jpg" alt="">
+      <div class="pers-page__desc-box">
+        <div class="pers-page__desc">
+          <p class="pers-page__desc-title">
+            ИНН
+          </p>
+          <p class="pers-page__desc-text">
+            1212153335
+          </p>
+        </div>
+        <div class="pers-page__desc">
+          <p class="pers-page__desc-title">
+            СНИЛС
+          </p>
+          <p class="pers-page__desc-text">
+            1212153335
+          </p>
+        </div>
+        <div class="pers-page__desc">
+          <p class="pers-page__desc-title">
+            СРО
+          </p>
+          <p class="pers-page__desc-text">
+            11.11.2011
+          </p>
+        </div>
+        <div class="pers-page__desc">
+          <p class="pers-page__desc-title">
+            дата регистрации в Росреестре
+          </p>
+          <p class="pers-page__desc-text">
+            11.11.2011
+          </p>
+        </div>
+        <div class="pers-page__desc">
+          <p class="pers-page__desc-title">
+            регион
+          </p>
+          <div class="pers-page__regions">
+            <p class="pers-page__region-text">
+              Москва,
+            </p>
+            <p class="pers-page__region-text">
+              Ростовская область,
+            </p>
+            <a class="pers-page__region-link" href="">
+              еще 20 регионов
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+{% endblock %}

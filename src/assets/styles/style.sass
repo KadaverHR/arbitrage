@@ -331,21 +331,4 @@ body::-webkit-scrollbar-thumb
   @media all and ($l)
     display: none
 
-.reviews-page__item
-  position: relative
-  transition: box-shadow $anim
-  &:hover .reviews__card
-    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.25)
 
-.reviews__card
-  &::before
-    content: ""
-    position: absolute
-    z-index: 5
-    top: -21px
-    left: 50%
-    transform: translateX(-50%)
-    width: 95px
-    height:22px
-    background: #fff
-    clip-path: path('M0.166016 22C11.7202 8.53125 28.8638 0 48 0C66.6812 0 83.4629 8.13281 95 21.0469V22H0.166016Z')
