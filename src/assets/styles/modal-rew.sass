@@ -1,0 +1,47 @@
+.reviews__card.modal
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  padding-top: 45px
+  min-width: 461px
+  @media all and ($s)
+    width: 100%
+    min-width: 0
+  .reviews-page__site-stars
+    justify-content: start
+  .reviews__text
+    -webkit-line-clamp: inherit
+    line-clamp: inherit
+  .reviews__card-modal-bottom
+    display: grid
+    grid-auto-flow: column
+    justify-content: space-between
+  .reviews__card-modal-date
+    font-family: $second-family
+    font-weight: 500
+    font-size: 14px
+    line-height: 171%
+    color: $text
+  .reviews__card-modal-link
+    font-family: $font-family
+    font-weight: 400
+    font-size: 14px
+    line-height: 129%
+    text-decoration: underline
+    text-decoration-skip-ink: none
+    color: $h1-6
+    transition: color $anim
+    &:hover, &:active, &:focus
+      color: $btn-active
+  .reviews__content-box
+    position: relative
+  .reviews__card-modal-close-box
+    display: grid
+    position: absolute
+    grid-auto-flow: column
+    gap: 20px
+    align-items: center
+    align-content: center
+    right: 0
+    top: -20px

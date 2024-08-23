@@ -460,6 +460,7 @@ $(document).ready(function () {
 
   let formCallTop = document.querySelector('.header-call')
   let formCallFooter = document.querySelector('.footer-call')
+  let staffCall = document.querySelector('.staff-call')
 
   const headerCall = document.getElementById('headerCall');
 
@@ -512,6 +513,27 @@ $(document).ready(function () {
     },
   });
 
+
+
+  tippy(staffCall, {
+    content: headerCall.innerHTML,
+    allowHTML: true,
+    placement: 'top-end',
+    arrow: false,
+    animation: 'fade',
+    trigger: 'click',
+    interactive: true,
+    onShow(instance) {
+      instance.popper.querySelector('.connect__form-close').addEventListener('click', () => {
+        instance.hide();
+      });
+    },
+    onHide(instance) {
+      instance.popper.querySelector('.connect__form-close').removeEventListener('click', () => {
+        instance.hide();
+      });
+    },
+  });
 
 
 
@@ -576,7 +598,7 @@ $(document).ready(function () {
 
   let regions = document.querySelector('.pers-page__region-other')
   let btnRegions = document.querySelector('.pers-page__region-link')
-  console.log(btnRegions);
+
   if (btnRegions) {
     btnRegions.addEventListener('click', () => {
       regions.classList.remove('d-n')
@@ -587,8 +609,40 @@ $(document).ready(function () {
 
 
 
+  //модальное окно
+
+  let modalReview = document.querySelector('.modal-bg')
+  let btnReview = document.querySelectorAll('.reviews__btn')
+  let modalClose = document.querySelector('.reviews__card-modal-close')
 
 
+  if (btnReview) {
+    btnReview.forEach(element => {
+      element.addEventListener('click', () => {
+        modalReview.classList.remove('d-n')
+        body.classList.add('stop-scroll')
+      })
+    });
+  }
+
+
+  if (modalClose) {
+
+    modalClose.addEventListener('click', () => {
+      modalReview.classList.add('d-n')
+      body.classList.remove('stop-scroll')
+    })
+
+  }
+
+
+  document.addEventListener('mouseup', function (e) {
+    var container = document.querySelector('.modal');
+    if (!container.contains(e.target)) {
+      modalReview.classList.add('d-n')
+      body.classList.remove('stop-scroll')
+    }
+  });
 
 
 

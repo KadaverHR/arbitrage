@@ -5,7 +5,7 @@
     align-items: baseline
     gap: 5px
     padding-bottom: 20px
-    border-bottom: 1px solid #c2c2c2
+    border-bottom: 1px solid #d6d6d6
     .title
       position: relative
       display: flex
@@ -17,6 +17,11 @@
         height: 23px
         background: #c2c2c2
         display: block
+      @media all and ($s)
+        display: inline
+        &::after
+          display: none
+
   &__title-subtitle
     font-family: $font-family
     font-weight: 600
@@ -29,13 +34,18 @@
     grid-template-columns: repeat(3, auto)
     padding-top: 20px
     padding-bottom: 30px
-    border-bottom: 1px solid #c2c2c2
+    border-bottom: 1px solid #d6d6d6
     align-items: start
     gap: 30px
+    @media all and ($s)
+      grid-template-columns: 1fr
   &__img
     border-radius: 5px
     max-width: 300px
     object-fit: cover
+    @media all and ($s)
+      max-width: none
+      width: 100%
   &__desc-title
     font-family: $font-family
     font-weight: 600
@@ -58,7 +68,7 @@
       text-transform: none
       color: #333643
       span
-        color: #f47500
+        color: $btn-active
   &__desc
     display: grid
     grid-template-columns: 1fr 1fr
@@ -78,6 +88,19 @@
     display: grid
     grid-template-columns: 1fr 1fr
     margin-top: 30px
+    @media all and ($l)
+      grid-template-columns: 1fr
+      justify-content: center
+      justify-items: center
+      gap: 30px
+      margin-top: 0
+    @media all and ($m)
+      grid-row: 2/3
+      grid-column: 1/3
+      grid-template-columns: repeat(2, auto)
+    @media all and ($s)
+      grid-row: auto
+      grid-column: auto
   &__icons-block
     display: grid
     justify-items: center
@@ -90,6 +113,7 @@
     color: #5188bb
     margin-top: 20px
     margin-bottom: 10px
+    text-align: center
   &__icons-count-title
     font-family: $font-family
     font-weight: 600
@@ -97,3 +121,153 @@
     line-height: 160%
     text-transform: uppercase
     color: $body-text
+  &__desc-btn
+    border: 2px solid $btn-active
+    border-radius: 50px
+    padding: 10px 20px
+    font-family: $font-family
+    font-weight: 700
+    font-size: 14px
+    line-height: 114%
+    text-align: center
+    color: $h1-6
+    margin-top: 10px
+    justify-self: start
+    text-decoration: none
+    transition: background $anim
+    &:active, &:focus, &:hover
+      background: $btn-active
+    @media all and ($s)
+      width: 100%
+  &__graphic-title
+    font-family: $second-family
+    font-weight: 700
+    font-size: 34px
+    line-height: 129%
+    color: #292d38
+    margin-block-start: 0
+    margin-block-end: 0
+    @media all and ($m)
+      font-size: 30px
+  &__graphic
+    display: grid
+    gap: 17px
+
+  &__graphic-box
+    padding-top: 30px
+    padding-bottom: 50px
+    border-bottom: 1px solid #d6d6d6
+    grid-template-columns: 1fr 1fr
+    display: grid
+    gap: 30px
+    margin-bottom: 50px
+    @media all and ($m)
+      grid-template-columns: 1fr
+      margin-bottom: 30px
+      padding-bottom: 30px
+  &__procedures-list
+    display: grid
+    margin-bottom: 40px
+    margin-top: 20px
+  &__procedures-card
+    padding: 20px
+    display: grid
+    grid-template-columns: 1fr 1.5fr 1.5fr 100px
+    justify-content: space-between
+    gap: 30px
+    align-items: start
+    align-items: center
+    @media all and ($s)
+      grid-template-columns: 1fr
+      padding: 20px 10px
+      gap: 20px
+    &--mobile
+      @media all and ($s)
+        grid-template-columns: auto auto auto
+        justify-content: start
+        gap: 2px
+        .pers-page__procedures-card-title
+          position: relative
+          &::after
+            content: "/"
+          &:last-child::after
+            display: none
+
+  &__procedures-pers
+    padding: 12px 35px
+    border-radius: 250px
+    background: rgba(235, 235, 235, 0.5)
+    display: grid
+    justify-items: center
+    gap: 1px
+    transition: background $anim
+  &__procedures-name
+    font-family: $font-family
+    font-weight: 700
+    font-size: 16px
+    text-transform: capitalize
+    text-align: center
+    color: #333643
+    white-space: nowrap
+  &__procedures-inn
+    font-family: $font-family
+    font-weight: 600
+    font-size: 13px
+    line-height: 185%
+    text-transform: uppercase
+    color: #333643
+    white-space: nowrap
+    span
+      color: $text
+  &__procedures-doc
+    display: grid
+    gap: 5px
+  &__procedures-doc-name
+    font-family: $font-family
+    font-weight: 700
+    font-size: 15px
+    line-height: 140%
+    color: #333643
+    &.procedures-subname
+      font-weight: 400
+  &__procedures-link
+    display: grid
+    gap: 10px
+    grid-auto-flow: column
+    font-family: $font-family
+    font-weight: 700
+    font-size: 11px
+    line-height: 191%
+    color: #333643
+    align-items: center
+    text-decoration: none
+    justify-self: end
+    transition: color $anim
+    & svg path
+      transition: fill $anim
+    &:active, &:focus, &:hover
+      color: #fba04d
+    &:active svg path , &:focus svg path , &:hover svg path
+      fill: #fba04d
+    @media all and ($s)
+      justify-self: center
+
+  &__procedures-card-title
+    font-family: $font-family
+    font-weight: 600
+    font-size: 13px
+    line-height: 185%
+    text-transform: uppercase
+    color: $text
+  &__procedures-item
+    border-top: 1px solid #d6d6d6
+    transition: background $anim
+    &:last-child
+      border-bottom: 1px solid #d6d6d6
+    &:active, &:focus, &:hover
+      background: #f3f8fc
+    &:active .pers-page__procedures-pers, &:focus .pers-page__procedures-pers, &:hover .pers-page__procedures-pers
+      background: #fff
+
+  &__btn-other
+    margin: 0 auto

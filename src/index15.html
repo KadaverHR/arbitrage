@@ -1,0 +1,52 @@
+{% set title = "404" %}
+{% set bodyClass = "is-error-page" %}
+
+{% extends "html/layouts/default.html" %}
+
+{% block content %}
+
+
+<section class="error-page section">
+  <div class="container">
+    {% include "html/includes/breadcrumbs.html" %}
+
+
+    <div class="error-page__box">
+      <p class="error-page__subtitle">
+        Страница не найдена!
+      </p>
+      <h1 class="error-page__title">
+        404
+      </h1>
+      <p class="error-page__text">
+        Запрашиваемая страница была перенесена
+        или удалена. Но вы можете воспользоваться поиском по нашим специалистам.
+      </p>
+
+      <div id="search" class="search-area">
+        <form class="search" action="/search/" method="get">
+          <input type="text" class="search__input" value="" name="q" placeholder="Поиск арбитражного управляющего ">
+          <button class="button search__button" type="submit">
+            <img src="assets/img/search-header.svg" alt="Найти">
+          </button>
+        </form>
+
+      </div>
+
+
+      <p class="error-page__text">
+        А еще вы всегда можете вернуться на главную, чтобы начать сначала
+      </p>
+
+      <a class="error-page__link btn" href="http://">
+        Перейти на главную
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+{% endblock %}

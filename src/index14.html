@@ -97,6 +97,10 @@
             от <span>50 000</span> ₽
           </p>
         </div>
+
+        <button class="pers-page__desc-btn staff-call" href="">
+          Получить бесплатную консультацию
+        </button>
       </div>
       <div class="pers-page__icons-box">
         <div class="pers-page__icons-block">
@@ -113,6 +117,72 @@
     </div>
 
 
+    <div class="pers-page__graphic-box">
+      <div class="pers-page__graphic">
+        <h3 class="pers-page__graphic-title">
+          График завершенных дел
+        </h3>
+
+        <div class="pers-page__graphic-container">
+          <img src="assets/img/graphic.png" alt="">
+        </div>
+      </div>
+      <div class="pers-page__graphic">
+        <h3 class="pers-page__graphic-title">
+          Второй график
+        </h3>
+
+        <div class="pers-page__graphic-container">
+          <img src="assets/img/graphic.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="pers-page__procedures">
+      <h3 class="pers-page__graphic-title">
+        Банкротные процедуры
+      </h3>
+
+      <ul class="pers-page__procedures-list">
+
+        <li class="pers-page__procedures-item pers-titles">
+          <div class="pers-page__procedures-card pers-page__procedures-card--mobile">
+            <p class="pers-page__procedures-card-title">
+              должник
+            </p>
+            <p class="pers-page__procedures-card-title">
+              дело
+            </p>
+            <p class="pers-page__procedures-card-title">
+              последнее событие
+            </p>
+         
+          </div>
+        </li>
+        <li class="pers-page__procedures-item">
+          {% include "html/includes/procedure-card.html" %}
+        </li>
+        <li class="pers-page__procedures-item">
+          {% include "html/includes/procedure-card.html" %}
+        </li>
+        <li class="pers-page__procedures-item">
+          {% include "html/includes/procedure-card.html" %}
+        </li>
+        <li class="pers-page__procedures-item">
+          {% include "html/includes/procedure-card.html" %}
+        </li>
+        <li class="pers-page__procedures-item">
+          {% include "html/includes/procedure-card.html" %}
+        </li>
+        <li class="pers-page__procedures-item">
+          {% include "html/includes/procedure-card.html" %}
+        </li>
+      </ul>
+
+      <button class="cases-page__btn pers-page__btn-other">
+        Показать еще
+      </button>
+    </div>
   </div>
 </section>
 
