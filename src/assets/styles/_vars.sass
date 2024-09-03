@@ -16,18 +16,13 @@ $button: #fba04d
 $body1: #f5f5f5
 $body-text: #201d19
 $text: #727584
-$btnactive :#EF8D36
+$btnactive: #EF8D36
 
-
-
-.btn 
+.btn
+  transition: $anim
   &:active, &:hover, &:focus
-    background: $btnactive 
-    transition: $anim
-    
-    
-    
+    background: $btnactive
 
-.l-dn 
+.l-dn
   @media all and ($l)
     display: none !important

@@ -78,7 +78,7 @@ $(document).ready(function () {
       clickable: true
     },
 
-    spaceBetween: 30,
+    // spaceBetween: 30,
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -111,7 +111,7 @@ $(document).ready(function () {
       el: '.swiper-case__swiper-pagination',
       clickable: true
     },
-    spaceBetween: 30,
+    // spaceBetween: 30,
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -138,7 +138,7 @@ $(document).ready(function () {
       el: '.swiper-reviews-video__swiper-pagination',
       clickable: true
     },
-    spaceBetween: 30,
+    // spaceBetween: 30,
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -174,7 +174,7 @@ $(document).ready(function () {
       clickable: true
     },
 
-    spaceBetween: 30,
+    // spaceBetween: 30,
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -202,7 +202,7 @@ $(document).ready(function () {
       clickable: true
     },
 
-    spaceBetween: 30,
+    // spaceBetween: 30,
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -236,7 +236,7 @@ $(document).ready(function () {
       clickable: true
     },
 
-    spaceBetween: 30,
+    // spaceBetween: 30,
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -269,7 +269,7 @@ $(document).ready(function () {
       clickable: true
     },
 
-    spaceBetween: 30,
+    // spaceBetween: 30,
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -302,7 +302,7 @@ $(document).ready(function () {
       clickable: true
     },
 
-    spaceBetween: 30,
+    // spaceBetween: 30,
     breakpoints: {
       0: {
         slidesPerView: 2,

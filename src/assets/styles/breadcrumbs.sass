@@ -13,6 +13,18 @@
 		color: $body-text
 		text-decoration: none
 		position: relative
+		transition: color $anim
+		&::after
+			content: ""
+			width: 100%
+			height: 1px
+			bottom: 0
+			background: $body-text
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			opacity: 0
+			transition: opacity $anim, background $anim
 		&::before
 			content: ""
 			position: absolute
@@ -23,6 +35,11 @@
 			right: -10px
 			top: 50%
 			transform: translateY(-50%)
+		&:active, &:focus, &:hover
+			color: $btn-active
+		&:active::after, &:focus::after, &:hover::after
+			opacity: 1
+			background: $btn-active
 
 	&__title
 		font-family: $font-family
