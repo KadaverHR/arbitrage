@@ -305,10 +305,10 @@ $(document).ready(function () {
     // spaceBetween: 30,
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       768: {
         slidesPerView: 3,
@@ -462,11 +462,33 @@ $(document).ready(function () {
   let formCallFooter = document.querySelector('.footer-call')
   let staffCall = document.querySelector('.staff-call')
 
+  let headerCallMob = document.querySelector('.catalog-mobile__btn-call')
   const headerCall = document.getElementById('headerCall');
 
-  // document.querySelector('.connect__form-close').addEventListener('click', () => {
-  //   preventDefault()
-  // })
+  document.querySelector('.connect__form-close').addEventListener('click', () => {
+    preventDefault()
+  })
+
+  tippy(headerCallMob, {
+    content: headerCall.innerHTML,
+    allowHTML: true,
+    placement: 'top',
+    arrow: false,
+    animation: 'fade',
+    trigger: 'click',
+    interactive: true,
+    onShow(instance) {
+      instance.popper.querySelector('.connect__form-close').addEventListener('click', () => {
+        instance.hide();
+      });
+    },
+    onHide(instance) {
+      instance.popper.querySelector('.connect__form-close').removeEventListener('click', () => {
+        instance.hide();
+      });
+    },
+  });
+
 
 
   tippy(formCallTop, {
@@ -579,11 +601,13 @@ $(document).ready(function () {
 
   if (selectStaff) {
     selectStaff.addEventListener('click', () => {
+      event.preventDefault()
       selectStaff.classList.toggle('active')
       selectList.classList.toggle('drop')
 
       selectItems.forEach(element => {
         element.addEventListener('click', () => {
+          event.preventDefault()
           let selectItemsText = element.innerHTML
           let selectItemsValue = element.value
           selectStaff.querySelector('.staffs-page__filter-select-value').innerHTML = selectItemsText
@@ -638,16 +662,52 @@ $(document).ready(function () {
 
   document.addEventListener('mouseup', function (e) {
     var container = document.querySelector('.modal');
-    if (!container.contains(e.target)) {
-      modalReview.classList.add('d-n')
-      body.classList.remove('stop-scroll')
+    if (modalClose) {
+      if (!container.contains(e.target)) {
+        modalReview.classList.add('d-n')
+        body.classList.remove('stop-scroll')
+      }
     }
   });
 
 
+  //модальное окно в мобилке
+  // let headerCallMob = document.querySelector('.catalog-mobile__btn-call')
+
+  // let CallModalMobClose = document.querySelector('.connect__form-close')
+
+  // let CallModalMob = document.getElementById('headerCall');
+
+  // if (headerCallMob) {
+
+  //   CallModalMob.addEventListener('click', () => {
+  //     headerCallMob.classList.remove('d-n')
+  //     body.classList.add('stop-scroll')
+  //   })
+
+  // }
+
+
+  // if (CallModalMobClose) {
+
+  //   CallModalMobClose.addEventListener('click', () => {
+  //     headerCallMob.classList.add('d-n')
+  //     body.classList.remove('stop-scroll')
+  //   })
+
+  // }
+
+
+  // document.addEventListener('mouseup', function (e) {
+  //   // var container = document.querySelector('.modal');
+  //   if (!headerCallMob.contains(e.target)) {
+  //     headerCallMob.classList.add('d-n')
+  //     body.classList.remove('stop-scroll')
+  //   }
+  // });
+
 
 });
-
 
 
 

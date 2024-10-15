@@ -13,7 +13,7 @@
       <span class="title-bg">Арбитражные управляющие </span>
     </h1>
 
-    <div class="staffs-page__filter-box">
+    <form  class="staffs-page__filter-box">
       <div class="staffs-page__filter-block">
 
         <p class="staffs-page__filter-label">
@@ -22,24 +22,25 @@
 
 
         <div class="staffs-page__select">
-          <button data-value="All" class="staffs-page__filter-select">
+
+          <button data-value="all" class="staffs-page__filter-select">
             <p class="staffs-page__filter-select-value">Все</p>
             <img class="staffs-page__filter-select-arrow" src="assets/img/select-arrow.svg">
           </button>
 
           <div class="staffs-page__filter-select-drop">
-            <p data-value="orel" class="staffs-page__filter-select-text">
+            <button type="submit" data-value="all" class="staffs-page__filter-select-text">
               Все
-            </p>
-            <p data-value="orel" class="staffs-page__filter-select-text">
+            </button>
+            <button type="submit" data-value="orel" class="staffs-page__filter-select-text">
               Орел
-            </p>
-            <p data-value="msk" class="staffs-page__filter-select-text">
+            </button>
+            <button type="submit" data-value="msk" class="staffs-page__filter-select-text">
               Москва
-            </p>
-            <p data-value="spb" class="staffs-page__filter-select-text">
+            </button>
+            <button type="submit" data-value="spb" class="staffs-page__filter-select-text">
               СПБ
-            </p>
+            </button>
           </div>
         </div>
       </div>
@@ -69,11 +70,9 @@
             <label class="staffs-page__filter-radio-text" for="radio-4">более 200</label>
           </div>
 
-
-
         </div>
       </div>
-    </div>
+    </form>
 
 
     <ul class="staffs-page__list">

@@ -74,20 +74,22 @@
   display: grid
   grid-template-columns: 1fr 2fr
   gap: 30px
+  align-items: start
   @media all and ($l)
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr 1.5fr
   @media all and ($m)
     grid-template-columns: 1fr
   &__block
     display: grid
     gap: 20px
+    @media all and ($m)
+      gap: 10px
   &__text
     font-family: $font-family
     font-weight: 400
     font-size: 18px
     line-height: 144%
     color: $body-text
-    padding-left: 6px
     @media all and ($m)
       font-size: 15px
       line-height: 120%
@@ -99,8 +101,12 @@
     grid-template-columns: repeat(2, 1fr)
     gap: 30px
     align-content: center
+    margin-top: 25px
+    @media all and ($m)
+      margin-top: 0
     @media all and ($s)
       grid-template-columns: 1fr
+
   &__item
     padding: 20px
     border-radius: 5px
@@ -422,6 +428,9 @@
   background-repeat: no-repeat
   padding-top: 50px
   padding-bottom: 50px
+  @media all and ($s)
+    padding-top: 40px
+    padding-bottom: 40px
   .title
     font-family: $second-family
     font-weight: 600
@@ -431,6 +440,9 @@
     text-align: center
     span
       color: #fec087
+    @media all and ($s)
+      font-size: 24px
+      line-height: 142%
   &__box
     display: grid
     gap: 20px
@@ -440,6 +452,9 @@
     font-size: 19px
     line-height: 126%
     color: $white
+    @media all and ($s)
+      font-size: 16px
+      line-height: 150%
   &__form
     display: grid
     gap: 20px
@@ -466,6 +481,8 @@
       font-size: 16px
       line-height: 150%
       color: #221715
+    @media all and ($s)
+      padding: 14px 20px
   &__form-btn
     border-radius: 5px
     padding: 16px 20px

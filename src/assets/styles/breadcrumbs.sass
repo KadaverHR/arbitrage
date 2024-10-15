@@ -1,19 +1,16 @@
 .breadcrumbs
 	padding-bottom: 30px
-	display: grid
-	gap: 15px
-	grid-auto-flow: column
-	justify-content: start
-	justify-items: start
+	display: inline
 	&__link
 		font-family: $font-family
 		font-weight: 400
 		font-size: 14px
 		line-height: 114%
-		color: $body-text
+		color: $btn-active
 		text-decoration: none
 		position: relative
 		transition: color $anim
+		display: inline
 		&::after
 			content: ""
 			width: 100%
@@ -35,8 +32,6 @@
 			right: -10px
 			top: 50%
 			transform: translateY(-50%)
-		&:active, &:focus, &:hover
-			color: $btn-active
 		&:active::after, &:focus::after, &:hover::after
 			opacity: 1
 			background: $btn-active
@@ -47,3 +42,5 @@
 		font-size: 14px
 		line-height: 114%
 		color: $text2
+		display: inline
+		padding-left: 10px

@@ -12,6 +12,7 @@
       margin: 0
       width: 100%
       max-width: 100%
+      margin-bottom: 30px
   &__text
     margin-bottom: 10px
     font-family: $font-family
@@ -26,6 +27,9 @@
       color: $btn-active
     strong
       font-weight: 700
+    @media all and ($m)
+      font-size: 15px
+      line-height: 120%
   &__list
     display: grid
     grid-template-columns: repeat(3,auto)
@@ -68,7 +72,7 @@
     padding-top: 20px
     @media all and ($s)
       display: grid
-      gap: 30px
+      gap: 0
   &__tab-box
     background: $white
     margin-top: 40px
@@ -122,6 +126,9 @@
     margin-top: 20px
     span
       font-weight: 700
+    @media all and ($m)
+      font-size: 15px
+      line-height: 120%
 
 .certificates
   display: flex
@@ -140,8 +147,8 @@
     box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.15)
     border-radius: 5px
     display: grid
-    justify-content: center
-    justify-items: center
+    justify-content: stretch
+    justify-items: stretch
 
 .partners
   display: flex
@@ -157,6 +164,10 @@
     background: #6d6f7c
   &__card
     padding: 15px 30px
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.17)
+    // box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.17)
+    border: 1px solid #d7d7d7
     background: $white
     border-radius: 10px
+    display: grid
+    justify-items: center
+    align-items: center

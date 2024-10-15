@@ -3,13 +3,17 @@
   left: 50%
   top: 50%
   transform: translate(-50%,-50%)
-  padding-top: 45px
+  padding-top: 50px
   max-width: 461px
   @media all and ($s)
-    width: 100%
+    width: 90%
     min-width: 0
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 50px
+    padding-bottom: 10px
   .reviews-page__site-stars
-    justify-content: start
+    justify-self: start
   .reviews__text
     -webkit-line-clamp: inherit
     line-clamp: inherit
@@ -44,4 +48,8 @@
     align-items: center
     align-content: center
     right: 0
-    top: -20px
+    top: -30px
+    @media all and ($s)
+      top: -40px
+  .reviews__card-modal-close
+    display: grid

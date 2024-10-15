@@ -31,10 +31,16 @@
 
 <body {% if bodyClass %}class="{{ bodyClass }} body" {% endif %} id="body">
 
+
   {% include "html/includes/header.html" %}
 
 
   <main>
+    <section class="gray">
+      <div class="container ">
+        {% include "html/includes/breadcrumbs.html" %}
+      </div>
+    </section>
     {% block content %}{% endblock %}
 
   </main>

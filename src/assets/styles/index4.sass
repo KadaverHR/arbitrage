@@ -11,6 +11,9 @@
     font-size: 18px
     line-height: 144%
     color: $body-text
+    @media all and ($m)
+      font-size: 15px
+      line-height: 120%
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -18,6 +21,8 @@
     padding-top: 40px
     @media all and ($m)
       grid-template-columns: repeat(2, 1fr)
+    @media all and ($s)
+      padding-top: 30px
   &__item
     padding: 35px 20px
     display: grid
